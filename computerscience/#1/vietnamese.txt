@@ -1,0 +1,388 @@
+Xin chào, tôi là Carrie Anne và chào mừng đến với khóa Khoa học máy tính của CrashCourse!
+
+Trong khoá học này, chúng ta sẽ đi từ bits, bytes, transistor và cổng
+
+logic, cho đến Hệ điều hành, Thực tế ảo và Robot!
+
+Chúng ta sẽ nói về rất nhiều thứ, nhưng cũng cần nói rõ, chúng tôi sẽ KHÔNG  dạy bạn
+
+cách để lập trình.
+
+Thay vào đó, chúng ta sẽ khám phá một phạm vi các chủ đề liên quan đến máy tính như là một môn học và một loại công nghệ.
+
+ 
+
+Máy vi tính là huyết mạch của thế giới ngày nay.
+
+Nếu chúng đột nhiên tắt cùng một lúc, lưới điện sẽ sập, xe ô tô gây tai nạn,
+
+máy bay sẽ rơi, nhà máy xử lý nước sẽ dừng lại, thị trường chứng khoán sẽ đóng băng,
+
+xe tải chở đồ ăn sẽ không biết nơi nào
+để giao hàng và nhân viên sẽ không được trả lương.
+
+Ngay cả nhiều đối tượng phi-máy-tính như những chiếc áo DFTBA và cái ghế tôi đang ngồi cũng
+
+được sản xuất trong các nhà máy chạy bằng máy tính.
+
+Máy tính thực sự đã thay đổi gần như mọi khía cạnh trong cuộc sống của chúng ta.
+
+Và đây không phải là lần đầu tiên chúng ta nhìn thấy loại thay đổi toàn cầu nhờ công nghệ như thế này.
+
+Những tiến bộ về sản xuất trong Cách Mạng Công Nghiệp mang lại một quy mô mới cho nền văn minh của con người
+
+- trong nông nghiệp, công nghiệp và cuộc sống gia đình.
+
+Cơ giới hóa có nghĩa là thu hoạch tốt hơn và nhiều thực phẩm hơn, hàng hoá sản xuất hàng loạt,
+
+liên lạc và di chuyển nhanh và rẻ hơn, và thông thường là một cuộc sống chất lượng hơn.
+
+Và công nghệ máy tính đang làm điều đó ngay lúc này - từ nông nghiệp tự động và thiết bị
+
+y tế tự động, đến viễn thông toàn cầu,
+cơ hội về giáo dục và những ranh giới mới
+
+như Thực tế ảo và Xe lái tự động.
+
+Chúng ta đang sống trong một thời gian có thể được nhớ như Thời đại Điện tử.
+
+Với hàng tỷ bóng bán dẫn trong chỉ một chiếc điện thoại thông minh, máy tính có vẻ khá phức tạp,
+
+nhưng thực sự, chúng chỉ là những chiếc máy đơn giản thực hiện các hành động phức tạp thông qua nhiều
+
+lớp trừu tượng.
+
+Vì vậy, trong loạt bài này, chúng ta sẽ bóc tách những lớp này, và xây dựng một cách đơn giản từ 1
+
+và 0 (hệ nhị phân), tới các đơn vị logic, CPU, hệ điều hành, toàn bộ internet và hơn thế nữa.
+
+Và đừng lo lắng, theo cùng một cách
+một người mua áo thun trên trang web không cần
+
+biết trang web đó đã được lập trình như thế nào, hoặc các nhà thiết kế web không cần phải biết làm thế nào
+
+tất cả các gói được định tuyến hoặc các kỹ sư router không cần phải biết về logic transistor,
+
+series này sẽ được xây dựng trên các thành tựu trước đó nhưng sẽ không phụ thuộc vào chúng.
+
+Vào cuối loạt bài này, tôi hy vọng rằng bạn có thể hiểu rõ hơn vai trò của máy tính trong nhiều ngữ cảnh,
+
+cả trong cuộc sống của bạn và trong xã hội, và cách mà phát minh được cho là lớn nhất của loài người này,
+
+chỉ trong giai đoạn đầu của nó, với những tác động lớn nhất của nó vẫn còn chưa được khám phá hết.
+
+Nhưng trước khi tìm hiểu điều đó, chúng ta nên bắt đầu từ nguồn gốc của máy tính, vì mặc dù
+
+máy tính điện tử là là một khái niệm tương đối mới nhưng nhu cầu cần tính toán thì không.
+
+INTRO
+
+Thiết bị được sử dụng sớm nhất để tính toán
+
+là bàn tính, được phát minh ra ở Mesopotamia vào khoảng 2500 TCN.
+
+Nó chủ yếu là một máy tính hoạt động bằng tay, giúp cộng và trừ nhiều số.
+
+Nó cũng lưu trữ trạng thái hiện tại của việc tính toán, giống như ổ cứng của bạn hiện nay.
+
+Bàn tính được tạo ra bởi vì, quy mô
+của xã hội đã dần trở nên lớn hơn số lượng mà
+
+một người có thể nhớ và kiểm soát
+tâm trí của họ.
+
+Có thể có hàng ngàn người trong một ngôi làng hay hàng chục ngàn gia súc.
+
+Có rất nhiều biến thể của bàn tính, nhưng hãy nhìn vào một phiên bản cơ bản với
+
+mỗi hàng đại diện cho một quyền hạn khác nhau của mười đơn vị.
+
+Như vậy, mỗi hạt ở hàng dưới cùng tương đương một đơn vị duy nhất, ở  hàng tiếp theo nó tương đương với
+
+10 đơn vị, hàng tiếp theo là 100 đơn vị, và tiếp tục như thế.
+
+Giả sử chúng ta có 3 gia súc tương đương với 3 hạt ở hàng dưới cùng bên phải.
+
+Nếu chúng ta mua thêm 4 gia súc, chúng ta sẽ chỉ trượt thêm 4 hạt vào bên phải thành tổng cộng là 7.
+
+Nhưng nếu chúng ta thêm 5 con nữa thì sau 3 con đầu tiên chúng ta sẽ không còn hạt, vì vậy ta sẽ trượt
+
+mọi thứ trở lại bên trái, trượt một hạt
+ở hàng thứ hai qua bên phải, đại diện
+
+cho mười, và sau đó thêm 2 hạt ở hàng dưới cùng cho tổng cộng là 12.
+
+Điều này đặc biệt hữu ích với số lượng lớn.
+
+Như vậy, nếu chúng ta thêm 1,251,  chúng ta sẽ thêm 1 ở hàng dưới cùng, 5 ở  hàng thứ hai,
+
+2 ở hàng thứ ba, và 1 ở hàng thứ tư
+- chúng ta không cần phải tính toán trong đầu và
+
+bàn tính sẽ lưu trữ tổng số.
+
+Trong 4000 năm tiếp theo, con người phát triển rất nhiều các loại thiết bị tính toán thông minh như
+
+dụng cụ đo cao thiên thể, cho phép các tàu tính toán vĩ độ của họ trên biển.
+
+Hay là thước lôgarít (slide rule) để hỗ trợ phép tính nhân
+và chia.
+
+Và có hàng trăm loại đồng hồ được tạo ra để tính toán
+
+mặt trời mọc, thủy triều, vị trí của các thiên thể, và thậm chí chỉ là thời gian.
+
+Mỗi một trong những thiết bị này đã biến một một điều trước đây tốn nhiều công sức tính toán trở nên
+
+nhanh hơn, dễ dàng hơn, và thường chính xác hơn - nó giảm bớt rào cản để bắt đầu, và cùng một
+
+lúc, khuyếch đại năng lực trí tuệ của chúng ta - hãy ghi chú, đây là một chủ đề chúng ta sẽ đề cập
+
+rất nhiều trong loạt bài này.
+
+Như người tiên phong về máy tính Charles Babbage đã nói: "Trong mỗi sự gia tăng về kiến ​​thức,
+
+cũng như là trong sự tiện nghi của mỗi công cụ mới, công sức lao động của con người được giảm đi. "
+
+Tuy nhiên, không có thiết bị nào trên trên đây từng được gọi là "Máy tính".
+
+Tài liệu sớm nhất ghi chép việc sử dụng từ "máy tính" là từ 1613, trong một cuốn sách của Richard Braithwait.
+
+Và nó không phải là để chỉ một cái máy - mà là một chức vụ.
+
+Braithwait nói, "I have read the truest computer of times,
+
+and the best arithmetician that ever breathed, and he reduceth thy dayes into a short number”.
+
+Trong những ngày đó, "máy tính" là một người làm công việc tính toán, đôi khi với sự trợ giúp của máy móc,
+
+nhưng thường thì không.
+
+Chức danh này vẫn tồn tại cho đến cuối những năm 1800, khi ý nghĩa của máy tính bắt đầu
+
+chuyển qua ám chỉ những thiết bị.
+
+Đáng chú ý trong số những thiết bị này là Step Reckoner, được xây dựng bởi nhà thông thái nguười Đức Gottfried Leibniz
+
+vào năm 1694.
+
+Leibniz nói "... nhân phẩm của những người đàn ông tuyệt vời không dành để lãng phí thời gian trong việc tính toán
+
+khi mà bất cứ người nông dân nào cũng có thể làm công việc này chính xác tương tự với sự trợ giúp của một cái máy."
+
+Nó hoạt động giống như hành trình kế trên xe hơi, thực chất là một cái máy để tính
+
+số dặm mà chiếc xe đã đi.
+
+Thiết bị có một loạt các bánh răng quay; mỗi bánh răng có mười răng, tương đương với
+
+chữ số từ 0 đến 9.
+
+Bất cứ khi nào một thiết bị lọt qua 9, nó quay trở lại 0 và nâng cấp bánh răng lân cận lên một răng.
+
+Giống như khi đạt đến 10 đơn vị
+trong bàn tính cơ bản.
+
+Điều này cũng vận hành ngược lại khi thực hiện phép trừ.
+
+Với một số thủ thuật cơ khí thông minh, Step Reckoner cũng đã thực hiện đuợc tính nhân và chia.
+
+ 
+
+Phép nhân và chia các đơn vị thực chất chỉ là nhiều phép cộng và trừ.
+
+Ví dụ: nếu chúng ta muốn chia 17 cho 5, chúng ta chỉ cần trừ đi 5, sau đó tiếp tục trừ 5, sau đó trừ 5 một lần nữa,
+
+và sau đó chúng ta không thể thêm 5 một lần nào nữa ...vì vậy chúng ta biết có ba lần 5 trong 17, với
+
+2 còn dư lại.
+
+Step Reckoner đã có thể làm điều này một cách tự động, và là chiếc máy đầu tiên
+
+có thể làm cả bốn hoạt động này.
+
+Và thiết kế này đã thành công đến mức nó được sử dụng trong ba thế kỷ tiếp theo.
+
+Nhưng thật không may, ngay cả với máy tính cơ khí, hầu hết các vấn đề thực tế trên thế giới đòi hỏi nhiều bước
+
+tính toán trước khi xác định một câu trả lời.
+
+Có thể mất hàng giờ hoặc nhiều ngày để cho ra một kết quả duy nhất.
+
+Ngoài ra, những chiếc máy thủ công này rất đắt tiền, và không thể tiếp cận được đối với hầu hết mọi người.
+
+Vì vậy, trước thế kỷ 20, hầu hết mọi người đều có kinh nghiệm tính toán thông qua các bảng tính trước được tổng hợp
+
+bởi những "máy tính con người" tuyệt vời mà chúng ta đã đề cập.
+
+Vì vậy, nếu bạn cần biết căn bậc hai của 8 triệu 6 trăm 75 nghìn 3 trăm lẻ 9,
+
+thay vì dành cả ngày tính gãy tay bằng bộ đếm bước của bạn, bạn có thể tìm nó trong
+
+một cuốn sách lớn chứa đầy các bảng căn bậc hai trong vòng một phút.
+
+Tốc độ và độ chính xác là đặc biệt quan trọng trên chiến trường, vậy nên quân động là một
+
+trong số những người đầu tiên áp dụng tính toán vào các vấn đề phức tạp.
+
+Một vấn đề đặc biệt khó khăn là độ chính xác của đại bác, mà trong những năm 1800
+
+có thể  bay xa trên một cây số (hoặc xa nửa dặm một chút).
+
+Cộng thêm điều kiện gió khác nhau, nhiệt độ, và áp suất khí quyển, thậm chí
+
+nhắm đến một thứ lớn như một con tàu là rất khó khắn.
+
+Các Dãy Ô được tạo ra cho phép các xạ thủ tìm kiếm các điều kiện môi trường và
+
+khoảng cách họ muốn bắn, và chiếc bảng này sẽ cho họ biết góc độ để thiết lập các đại bác.
+
+Những Dãy Ô này hoạt động rất tốt, chúng được sử dụng nhiều trong Chiến tranh Thế giới II.
+
+Vấn đề là, nếu bạn thay đổi thiết kế
+của pháo hoặc vỏ, một dãy ô hoàn toàn mới
+
+phải được tính toán lại, và sẽ rất tốn nhiều thời gian, cộng thêm việc chắc chắc sẽ có sai sót.
+
+Charles Babbage thừa nhận vấn đề này vào năm 1822 trong một bài báo cho Hiệp hội Thiên văn Hoàng gia
+
+với tên gọi: "Lưu ý về ứng dụng
+của máy móc để tính toán các dãy số
+
+thiên văn và toán học".
+
+Hãy nhìn vào "Thought Bubble".
+
+Charles Babbage đề xuất một thiết bị cơ khí mới gọi là Máy Khác biệt (Difference Engine),
+
+một chiếc máy phức tạp hơn nhiều có thể tính toán gần đúng các đa thức.
+
+Đa thức mô tả mối quan hệ giữa
+một số biến - giống như phạm vi và áp suất không khí,
+
+hoặc số lượng pizza Carrie Anne ăn và hạnh phúc.
+
+Nhiều đa thức cũng có thể được sử dụng để tính gần đúng những chức năng logarit và hàm lượng giác,
+
+là điều kinh khủng khi tính toán bằng tay.
+
+Babbage bắt đầu xây dựng vào năm 1823, và trong hai thập kỷ tiếp theo, đã cố gắng chế tạo
+
+và tập hợp 25.000 thành phần, tổng cộng nặng khoảng 15 tấn.
+
+Thật không may, dự án cuối cùng bị bỏ rơi.
+
+Nhưng, vào năm 1991, các nhà sử học đã hoàn thành xây dựng một Máy Khác Biệt dựa trên bản vẽ
+
+và các bài viết của Babbage - và nó đã hoạt động!
+
+Nhưng quan trọng hơn, trong quá trình xây dựng Máy Khác Biệt, Babbage đã hình dung
+
+một chiếc máy thậm chí còn phức tạp hơn - Máy Phân Tích (Analytical Engine).
+
+Không giống như Máy Khác Biệt, Step Reckoner và tất cả các thiết bị tính toán trước đó
+
+Máy Phân tích là một "máy tính có nhiều mục đích".
+
+Nó có thể được sử dụng cho nhiều thứ, không chỉ một tính toán cụ thể; nó có thể được đưa ra
+
+dữ liệu và vận hành các hoạt động theo trình tự; nó có bộ nhớ và thậm chí là một máy in nguyên thủy.
+
+Giống như Máy Khác Biệt, nó đã đi trước thời đại của mình, và không bao giờ được xây dựng môt cách hoàn thiện.
+
+Tuy nhiên, ý tưởng về một "máy tính tự động" - thứ có thể tự hướng dẫn chính nó thông qua
+
+một loạt hoạt động tự động, là một
+bước tiến lớn, và dự báo trước các lập trình trình máy tính.
+
+Nhà toán học người Anh Ada Lovelace đã viết lập trình giả thuyết cho Máy Phân tích, nói rằng,
+
+"Một ngôn ngữ mới, rộng lớn và mạnh mẽ được phát triển để sử dụng trong tương lai của sự phân tích. "
+
+Với công việc của mình, Ada thường được coi là lập trình viên đầu tiên của thế giới.
+
+Máy Phân Tích đã truyền cảm hứng, có thể nói,cho  thế hệ đầu tiên của các nhà khoa học máy tính,
+
+người đã kết hợp nhiều ý tưởng của Babbage trong những chiếc máy của họ.
+
+Đây là lý do tại sao Babbage thường được coi là "cha đẻ của tính toán".
+
+Cảm ơn "Thought Bubble"!
+
+Vì vậy, vào cuối thế kỷ 19, thiết bị tính toán đã được sử dụng cho các nhiệm vụ có mục đích đặc biệt
+
+trong khoa học và kỹ thuật, nhưng hiếm khi trong kinh doanh, chính phủ hoặc cuộc sống gia đình.
+
+Tuy nhiên, chính phủ Mỹ đã phải đối mặt với một vấn đề cho cuộc điều tra dân số năm 1890 yêu cầu
+
+một hiệu quả mà chỉ có máy tính
+có thể cung cấp.
+
+Hiến pháp Hoa Kỳ yêu cầu một cuộc điều tra dân số được thực hiện mỗi mười năm, cho các mục đích
+
+phân phối quỹ liên bang, đại diện
+trong đại hội, và những thứ tương tự như thế.
+
+Và đến năm 1880, dân số Hoa Kỳ đang bùng nổ, chủ yếu là do nhập cư.
+
+Cuộc điều tra dân số đó kéo dài bảy năm để biên soạn theo cách thủ công
+và đến thời điểm nó được hoàn thành,
+
+thì nó đã lỗi thời - và người ta dự đoán rằng cuộc điều tra dân số 1890 sẽ mất 13 năm để tính toán.
+
+Và "hơi" có vấn đề khi nó được yêu cầu thực hiện mười năm một lần.
+
+Cục điều tra dân số tìm đến Herman Hollerith, người đã xây dựng một máy tính bảng.
+
+Máy của ông là "điện cơ" - nó
+sử dụng các hệ thống cơ học truyền thống để lưu trữ những tính toán
+
+như Step Reckoner của Leibniz - nhưng kết hợp chúng với các thành phần điện.
+
+Máy của Hollerith sử dụng thẻ đục lỗ
+là những tấm giấy với một mạng lưới các địa điểm
+
+có thể được đục lỗ để đại diện cho dữ liệu.
+
+Ví dụ, có một loạt các lỗ cho tình trạng hôn nhân.
+
+Nếu bạn đã kết hôn, bạn sẽ đục vào
+lỗ kết hôn, sau đó khi thẻ đã được chèn vào
+
+máy của Hollerith, những kim loại nhỏ
+sẽ dập lên thẻ - nếu một vị trí
+
+đã được đục lỗ, kim loại sẽ đi qua
+lỗ trong giấy vào một lọ nhỏ
+
+đựng thủy ngân, và hoàn thành mạch điện.
+
+Việc này hoàn thành mạch điện
+động cơ, thêm một đơn vị vào, trong trường hợp này,
+
+tổng số "đã kết hôn".
+
+Máy của Hollerith nhanh hơn khoảng 10 lần so với các bảng thống kê bằng tay, và Tổng điều tra
+
+đã hoàn thành chỉ trong hai năm rưỡi - tiết kiệm cho Cơ quan điều tra dân số hàng triệu đô la.
+
+Các doanh nghiệp bắt đầu nhận thấy giá trị của tính toán, và thấy tiềm năng của nó trong việc
+
+gia tăng lợi nhuận bằng cách cải thiện việc sử dụng nhiều lao động và công việc liên quan đến dữ liệu, như kế toán, đánh giá bảo hiểm,
+
+và quản lý hàng tồn kho.
+
+Để đáp ứng nhu cầu này, Hollerith đã thành lập The Tabulating Machine Company, sau này sáp nhập
+
+với các nhà sản xuất máy móc khác vào năm 1924 để trở thành The International Business Machines Corporation,
+
+hoặc IBM - mà bạn có thể đã từng nghe đến.
+
+Những "cơ chế kinh doanh" điện cơ học này, là một thành công lớn, thay đổi thương mại
+
+và chính phủ, và đến giữa những năm 1900, sự bùng nổ dân số thế giới và sự gia tăng
+
+thương mại toàn cầu đòi hỏi các công cụ linh hoạt và nhanh hơn để xử lý dữ liệu,
+
+thiếp lập giai đoạn dành cho máy tính kỹ thuật số, mà chúng tôi sẽ nói đến trong tuần tới.
+

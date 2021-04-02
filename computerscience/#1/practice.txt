@@ -1,0 +1,100 @@
+hello, i'm acrrie anne and welcome to CrashCourse computer science
+
+over the course of this series, we'll go from bits, bytes, transistor and logic gates, all the way to operating systems, virtual reality and robot!
+
+we're going to cover alot, but just to clear things up, we're not going to teach you how to program
+
+intead, we'll explore a range of computing topics as a discipline and a technology
+
+
+computers are the lifeblood of the world's today.
+
+
+if they were to suddenly turn off, all at once, the power grid would shut down, cars would crash, planes would fall,
+water treatment plants would stop, stock markets would freeze, trucks with food wouldn't know where to deliver
+and employees wouldn’t get paid
+
+even non-computer objects like tftba shirts and the chair i'm sitting on are  made in factories run by computers.
+
+
+computing really has transformed nearly every aspect of our lives.
+and this isn't the first time we've seen this sort of technology-driven global change
+
+
+advanceds in manufacturing during the industrial revolution brought a new scale to human civilization in argiculture, industry and domestic life.
+
+
+mechanization meant superior harvests and more food, mass producted goods, faster and cheaper travel and communication, and usually a better quality of lifes.
+
+--
+and computer technology is doing the same right  now - from automated farming and medical equipment, to global communication, educational opportunities and new frontiers like virtual reality and seft driving cars.
+
+
+
+we're living in a time likely be remembered as the electronic age.
+
+
+with billions of transistors in just your smartphones, computers seem be pretty complicated. but really, they're just  simple machine that perform complex actions through many layers of abstraction.
+
+so in this series, we'll break down those layers, and  build from  simple 1's and 0's, to logic units, cpus, operating systems, the entire internet and beyond.
+
+don’t worry, in the same way a t-shirts buying person doesn’t need to know how that webpage is programmed, or web designer  doesn’t need to know how all the packets are routed or router engineers don't to know  transistor logic,
+
+this series will build on previous episodes but  not be dependent on them.
+
+in the end of this series, i'm hope that you can  better contextualize computing's role ,
+in both your own life and society, and how this humanity's arguably greatest  invention, just in its infancy, with its biggest impacts yet to come
+
+but before we get into all that, we should start at computer's origins, because although computer is relatively new, but the need for computation  is not
+
+---
+
+the earliest recognized device for computing was the abacus, invented in around 2500 bce.
+
+it's essentially a hand operated calculator,that helps add and subtract many numbers.
+
+it also stores the current state of the computation, much like your hard drive does today
+
+the abucus was invented because the scale of society had become larger than  what a signle person could keep and manipulate in their mind.
+
+there  might be thousands of people in a village or tens of thousands of cattle.
+
+
+there are many variants of the abucus, but let’s look at a basic version with each row representing a different power of ten.
+
+so, each  bead on bottom row represents a single unit, in next row they represent tens, in row above is 100, and  so on.
+
+
+let’s say we have three heads of cattle represented by three beads on the bottom row on the right side
+
+if we were to buy 4 more cattle, we just to slide 4 more  beads to the right for a total of 7.
+
+but if we were to add  5 more after the first three we would run out of beads, so we would slide all back to the left, slide one bead on second row to the right, representing ten, and then add  the final two beads on thebottom for a total of 12.
+
+
+this is particularly useful with large numbers.
+
+so, if we were to add 1,251 more, we would just add one to the bottom row, 5 to the  second row, 2 to the third row, and 1 to the fourth row - we don't have to add in our heads and abucus will stores the total for us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
