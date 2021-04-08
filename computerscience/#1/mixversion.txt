@@ -159,15 +159,15 @@ So if we were to add 1,251 we would just add
 abacus stores the total for us.
 
 Over the next 4000 years, humans developed
-all sorts of clever computing devices, like
+rat nhieu cac loai thiet bi tinh toan, like
 
 the astrolabe, which enabled ships to calculate
-their latitude at sea.
+vi do cua ho at sea.
 
 Or the slide rule, de ho tro nhan va chia.
 
 And thuc su co hang tram loai dong ho
-created that could be used to calculate
+duoc tao ra that could be used to calculate
 
 sunrise, tides, vi tri cua cac tinh the,
 and even just the time.
@@ -181,7 +181,7 @@ time, khuech dai nang luc tri tue cua chung ta –– take
 note, this is a theme we’re going to de cap nhieu trong
 serie nay.
 
-As nguoi tien phon ve may tinh dau tien Charles Babbage
+As nguoi tien phong ve may tinh dau tien Charles Babbage
 said: “At moi su gia tang ve kien thuc, as
 
 well as on su tien loi cua moi cong cu moi,
