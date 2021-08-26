@@ -1,0 +1,375 @@
+Our last episode brought us to the start of
+the 20th century, where early, special purpose
+
+computing devices, like tabulating machines,
+were a huge loi ich to chinh phu va  kinh doanh. 
+aiding and sometimes replacing, cong viec thu cong lap di lap 
+lai. But the scale of human systems tiep tuc tang voi toc do chua tung co.
+The first half of the 20th century saw the
+
+world’s population almost double. World
+War 1 huy dong 70 million people, and World
+
+War 2 lien quan more than 100 million.
+Global mang luoi thuong mai va van chuyen became ket noi
+voi nhau hon bao h het, and the sophistication
+of no luc ve khoa hoc va ki thuat cua  chung toi
+
+reached new heights – we even started to
+nghiem thuc xem xet viec den tham cac  hanh tinh khac
+
+And it was this su bung no cua su phuc, quan lieu,
+and cuoi cung la data, 
+----------------------------------------
+dieu do da thuc day nhu cau ngya cang tang ve automation and computation.
+Soon those cabinet-sized electro-mechanical
+
+computers grew into room-sized behemoths that
+were ton kem de bao tri va de bi loi
+
+And it was these machines that would tao tien de cho
+su doi moi trong tuong lai
+
+One of the largest electro-mechanical computers
+
+built was the Harvard Mark I, completed in
+1944 by IBM for the Allies during World War 2.
+
+It contained 765,000 components, three
+million connections, and five hundred miles of wire.
+
+To keep its dong bo co hoc ben trong,
+
+it used a 50-foot shaft running right through
+the machine dieu khien boi dong co  5 ma luc.
+
+One of the earliest uses for this technology
+was chya mo phong for the Manhattan Project.
+
+The brains of these huge electro-mechanical
+
+beasts were relays: cong tac co hoc duoc dieu
+khien bang dien. In a relay, there is
+------------------------------------------
+a control wire that xac dinh mot mach dien duoc
+mo hay dong. The control wire connects
+
+to mot cuon day ben trong ro le. When current
+flows through the coil, mot dien tu truong duoc
+tao ra, which in turn,thu hut mot canh tay kim loai
+ben trong ro le, snapping it
+
+shut and completing the circuit. ban co the nghi role 
+giong nhu mot voi nuoc. The control
+
+wire is like the faucet handle. Open the faucet,
+and nuoc chay qua duogn ong. Close the
+
+faucet, and the flow of water stops.
+
+Relays are doing the same thing, just with
+
+electrons instead of water. The controlled
+circuit can then connect to other circuits,
+
+or to something like a motor, which might
+increment a count on a gear, like in Hollerith's
+
+tabulating machine we talked about last episode.
+----------------------------------------------------
+Unfortunately,cach tay co khi ben trong ro le co
+khoi luong, and therefore can’t
+move instantly between opened and closed states.
+
+A good relay in the 1940’s might be able
+to chuyen qua lai nam muoi lan trong mot giay.
+
+That might seem pretty fast, but it’s not
+du nhanh de huu ich khi giai quyet van de lon,
+
+phuc tap.
+The Harvard Mark I could do 3 additions or
+
+subtractions per second; multiplications took
+6 seconds, and divisions took 15.
+
+And more complex operations, nhu mot ham luong giac, could take over a minute.
+
+In addition to slow switching speed, another
+limitation was hao mon. Anything mechanical
+
+that moves will hao mon theo thoi gian. Some things
+break entirely, and other things start getting
+
+dinh, cham va don gian la khong dang tin cay.
+-----------------------------------------------------
+va khi so luong relay tang, the
+
+probability of a failure increases too. The
+Harvard Mark I co khoang 3500 relays. Even
+
+if ban gia su mot relay co tuoi tho hoat dong la 10 nam
+, this would mean you’d have
+
+to replace, on average, mot relay bi loi moi ngya
+! That’s a van de lon khi ban dang chay some important,
+multi-day calculation.
+
+And dieu do khong phai la tat ca cac ki su phai doi mat. 
+These huge, dark, and warm machines
+
+also  thu hut con trung. In September 1947,
+operators on the Harvard Mark II pulled a
+
+con buom dem chet tu mot relay bi truc trac. Grace Hopper who 
+we’ll talk more about in a later episode noted,
+
+“tu do tro di, when anything went wrong with a computer,
+
+we said it had bugs in it.”
+
+And that’s where
+we get the term computer bug.
+-------------------------------------------------------
+It was clear that mot su thay the nhanh hon, dang tin cay
+hon cho relay dien co was
+
+needed if computing was going to advance further,
+and fortunately that alternative already existed!
+
+In 1904, English physicist John Ambrose Fleming
+developed a new electrical component called
+
+mot van nhiet dien, which dat 2 dien duc ben trong
+mot bong den thuy tinh kin khi - this was the
+
+ong chan dau tien. One of the electrodes could
+be heated, dieu nay se khien no phat  electrons
+
+– a process called phat xa nhiet.
+dien cuc kia sau do co the hut cac electron nay
+to create the flow of our electric
+faucet, but only if it duoc tich dien duong
+
+- if it had a negative or neutral charge,
+the electrons would no longer bi hut trong chan khong
+ so no current would flow.
+---------------------------------------------
+An electronic component that cho phep dong dien mot chieu
+is called a diode, but nhung gi thuc su can thiet la mot cai
+cong tac to help turn
+
+this flow on and off. Luckily, shortly after,
+in 1906, American inventor Lee de Forest added
+
+mot dien cuc dieu khien thu 3 sits
+between the two electrodes in Fleming’s design.
+
+By applying a positive charge to the
+control electrode, it would permit the flow
+
+of electrons as before. But if the dien cuc dieu khien
+duoc cung cap mot dien tich am, it
+
+would prevent the flow of electrons.
+So by manipulating the control wire, one could
+
+open or close the circuit. It’s pretty much
+the same thing as a relay - but importantly,
+
+ong chan khong khong co bo phan chuyen dong. This meant
+there was less wear, and more importantly,
+
+they could switch thousands of times per second.
+----------------------------------------------
+nhung ong chan khong triode se tro thanh co so 
+cua radio, long distance telephone, and
+nhieu thiet bi dien tu khac trong gan nua the ki
+. I should note here that vacuum
+tubes weren’t perfect - chung thuoc loai mong manh
+, and can chay nhu bong den,
+they were a cai tien lon so voi relay co hoc.
+
+Also, ban dau ong chan khong thi dat
+
+– a radio set often used just one, but a
+computer co the yeu cau hang tram hoac hang nghin cong
+tac dien.
+
+But by the 1940s,
+chi phi va do tin cay cua chung da duoc cai thien den muc
+chung tro nen kha thi de su dung trong may tinh
+. at least by people with deep pockets, like governments.
+dieu nay danh dau su thay doi from electro-mechanical
+
+computing to electronic computing. Let’s
+go to the Thought Bubble.
+
+viec su dung quy mo lon dau tien cua ong chan khong de
+tinh toan was the Colossus Mk 1 designed
+--------------------------------------------------------
+by engineer Tommy Flowers and completed in
+December of 1943. The Colossus was installed
+
+at Bletchley Park, in the UK, va da giup giai ma thong tin
+lien lac cua duc quoc xa
+
+dieu nay nghe co ve quen thuoc  because two years
+prior Alan Turing, often called the father
+
+of computer science, da tao ra mot thiet bi co dien
+, also at Bletchley Park, called the
+
+Bombe. no la mot co may co dien duoc thiet ke de
+pha ma enigma, but the
+
+Bombe ve mat ki thuat khong phai la mot may tinh, and
+chung ta se xem xet nhung dong gop cua alan turing
+later.
+Anyway, the first version of Colossus contained
+
+1,600 vacuum tubes, and in total, ten Colossi
+duoc xay dung de giup pha ma
+
+Colossus duoc coi la may tinh dien, co the lap trinh duoc  
+dau tien.
+------------------------------------------------
+lap trinh duoc thuc hien bang cach cam hang tram soi 
+day vao cac phic cam, sort of like old
+
+school telephone switchboards, in order to
+thiet lap may tinh de thuc hien cac hoat dong phu hop
+
+So while “programmable”, no van phai duoc cau hinh de
+thuc hien mot phep tinh cu the.
+
+Enter the The Electronic Numerical Integrator
+and Calculator – or ENIAC – completed
+
+a few years later in 1946 at the University
+of Pennsylvania.
+
+Designed by John Mauchly and J. Presper Eckert, day la
+may tinh dien tu co muc dich chung, co the lap trinh duoc
+thuc su dau tien tren the gioi.
+
+ENIAC could perform 5000 ten-digit additions
+or subtractions per second, many, many times
+
+faster than any machine that came before it.
+-----------------------------------------------------
+no da hoat dong trong 10 nam, and is estimated
+
+to da thuc hien nhieu so hoc hon toan bo loai nguoi
+cho den thoi diem do.
+
+nhung cung voi do, nhieu loi ong chan khong da xay
+ra pho bien, and ENIAC was generally only operational
+
+trong khoang nua ngay truoc khi do vo.
+
+Thanks Thought Bubble. By the 1950’s, tham chi may tinh
+ dua tren ong chan khogn da dat den gioi han cua no.
+
+The US Air Force’s AN/FSQ-7 computer,
+which was completed in 1955, was part of the
+
+“SAGE” air defense computer system we’ll
+talk more about in a later episode.
+
+To reduce cost and size, as well as improve
+reliability and speed, a radical new electronic
+
+switch would be needed. In 1947, Bell Laboratory
+scientists John Bardeen, Walter Brattain,
+------------------------------------------------
+and William Shockley da phat minh ra transistor,
+and with it, mot ki nguyen may tinh hoan toan moi duoc
+ra doi!
+
+vat dang sau dong ban dan la
+pretty complex, dua vao co hoc luong tu,
+
+so we’re going to bam vao nhung dieu co ban.
+
+A transistor is just like a relay or vacuum
+tube - it’s a switch that can be opened
+
+or closed bang cach su dung nang luong dien thong qua
+mot day dieu khien. Typically, transistors have
+
+two electrodes duoc ngan cach boi mot vat lieu that
+sometimes can dan dien, and other
+
+times can tro no – a semiconductor.
+In this case, the control wire attaches to
+
+a “gate” electrode. bang cach thay doi dien tich cua cong
+, the conductivity of the
+
+semiconducting material can be manipulated,
+allowing current to flow or be stopped – like
+su tuong tu cua voi nuoc we discussed earlier.
+---------------------------------------------
+Even the very first transistor at Bell Labs
+
+cho thay day su hua hen– it could switch
+between on and off states 10,000 times per second.
+
+Further, khong giong nhu ong chan khong duoc lam bang
+thuy tinh va duoc treo can than, thanh phan de vo,
+transistors were solid material known as a solid state component.
+
+Almost immediately, bong ban dan co the duoc lam nho hon
+so voi ro le hoac ong chan khong nho nhat co the.
+
+dieu nay dan den cac may tinh nho hon va re hon dang ke, like the IBM 608, released in 1957
+
+– the first fully transistor-powered, commercially-available computer.
+
+It contained 3000 transistors and
+could perform 4,500 additions, or roughly
+
+80 multiplications or divisions, every second.
+IBM sda som chuyen doi tat ca cac san pham may tinh cua 
+minh sang bong ban dan, bringing transistor-based
+computers into offices, and eventually, homes.
+
+Today, may tinh su dung bong ban dan co kich thuoc 
+nho hon 50 nanomet – for
+
+reference, a sheet of paper is roughly 100,000
+nanometers thick.va chung khong chi cuc ki nho ma con
+sieu nhanh – they can switch
+states millions of times per second, and can run for decades.
+
+rat nhieu su phat trien cua bong ban dan va chat ban dan
+nay happened in the Santa Clara  Valley,
+
+between San Francisco and San Jose, California.
+
+vi vat lieu pho bien nhat duoc su dung de tao ra chat 
+ban dan la silicon, this
+
+region soon became known as Silicon Valley.
+Even William Shockley moved there, founding
+
+Shockley Semiconductor, whose employees later
+founded Fairchild Semiconductors, whose employees
+later founded Intel - the world’s largest computer chip
+maker today.
+
+Ok, so we’ve gone from relays to vacuum
+tubes to transistors. We can turn electricity
+
+on and off really, really, really fast. But
+how do we get from transistors to actually
+
+computing something, especially if we don’t
+have motors and gears?
+
+That’s what we’re going to cover over
+the next few episodes.
+
+Thanks for watching. See you next week.
+

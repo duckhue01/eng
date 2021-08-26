@@ -1,0 +1,304 @@
+Tập trước đã đưa chúng ta đến đầu
+thế kỷ 20, từ rất sớm,
+
+thiết bị tính toán với mục đích đặc biệt, như các máy chữ đánh bảng (Tabulating Machine), mang đến lợi ích to lớn cho chính phủ và doanh nghiệp
+
+- hỗ trợ, và đôi khi thay thế những việc làm bằng tay lặp đi lặp lại. Nhưng quy mô hệ thống con người vẫn tiếp tục gia tăng
+
+ở một tỉ lệ chưa từng thấy. Nửa đầu của thế kỷ 20 đã chứng kiến
+
+dân số thế giới tăng gần gấp đôi. Chiến tranh Thế giới thứ nhất huy động 70 triệu người, và
+
+Chiến tranh Thế giới thứ hai hơn 100 triệu người. Mạng lưới thương mại và vận chuyển toàn cầu đã liên kết với nhau hơn bao giờ hết,
+
+và sự tinh xảo trong nỗ lực về kỹ thuật và khoa học của chúng ta
+
+đã đạt đến những đỉnh cao mới - chúng ta thậm chí đã bắt đầu xem xét nghiêm túc việc viếng thăm các hành tinh khác.
+
+Và chính sự bùng nổ của sự phức tạp, quan liêu, và cuối cùng là dữ liệu, đã thúc đẩy sự gia tăng nhu cầu
+
+cho tự động hóa và tính toán. Chẳng bao lâu sau đó, các máy tính cơ điện có kích thước bằng một cabin
+
+đã phát triển thành những con vật kếch xù to như một căn phòng, tốn kém để duy trì và dễ bị lỗi.
+
+Và những chiếc máy này sẽ thiết lập
+nền tảng cho sự đổi mới trong tương lai.
+
+INTRO
+
+Một trong những máy tính cơ điện lớn nhất
+
+đã được xây dựng là Harvard Mark I, được hoàn thành năm 1944 bởi IBM cho phe Đồng minh trong Thế chiến 2.
+
+Nó chứa 765.000 thành phần, ba
+triệu kết nối, và năm trăm dặm dây dẫn.
+
+Để đồng bộ hóa hệ thống cơ học bên trong,
+
+nó sử dụng một trục 50-foot (15 mét) chạy xuyên qua máy được điều khiển bởi một động cơ năm mã lực.
+
+Một trong những ứng dụng sớm nhất của công nghệ này là chạy mô phỏng cho dự án Manhattan.
+
+Bộ não của những con quái vật cơ điện tử khổng lồ này
+
+là những Rơle (Relay): thiết bị chuyển mạch cơ kiểm soát bằng điện. Trong mỗi Rơle có
+
+một dây điều khiển xác định một mạch đang mở hay đóng. Dây điều khiển kết nối đến
+
+một cuộn dây bên trong rơle. Khi dòng điện chạy qua cuộn dây, một khu vực điện từ
+
+được tạo ra, do đó thu hút được
+một cánh tay kim loại bên trong rơle, đóng nó lại
+
+và hoàn thành mạch. Bạn có thể nghĩ một rơle giống như một vòi nước. Dây kiểm soát
+
+giống như tay cầm vòi nước. Mở vòi nước, và nước chảy qua ống.
+
+Đóng vòi nước và dòng nước dừng lại.
+
+Rơle đang làm một điều giống như vậy, với
+
+electron thay vì nước. Mạch được kiểm soát sau đó có thể kết nối với các mạch khác,
+
+hoặc với một một khác như một động cơ, mà có thể tăng số lượng trên một thiết bị, như trong máy chữ đánh bảng của Hollerith
+
+chúng ta đã thảo luận ở tập trước. Thật không may, cánh tay cơ khí bên trong
+
+một relay *có khối lượng*, và do đó không thể di chuyển ngay lập tức giữa trạng thái mở và đóng.
+
+Một rơle tốt trong những năm 1940 có thể bật và tắt năm mươi lần trong một giây.
+
+Điều đó nghe có vẻ khá nhanh, nhưng thực chất không đủ nhanh để có thể trở nên hữu ích trong việc giải quyết các vấn đề lớn và phức tạp.
+
+Harvard Mark I có thể làm 3 phép cộng hoặc
+
+phép trừ mỗi giây; phép nhân thì mất
+6 giây, và phép chia thì mất 15 giây.
+
+Và các hoạt động phức tạp hơn, như chức năng lượng giác, có thể mất hơn một phút.
+
+Ngoài tốc độ chuyển đổi chậm, một
+hạn chế nữa là sự hao mòn. Bất cứ hoạt động cơ học nào di chuyển
+
+sẽ mòn theo thời gian. Một vài thứ
+bị hỏng hoàn toàn, và những thứ khác bắt đầu bị
+
+dính, chậm, và không còn đáng tin cậy.
+
+Và khi số lượng rơ le tăng,
+
+xác suất hỏng cũng tăng. Harvard Mark I có khoảng 3500 rơle.
+
+Ngay cả khi bạn cho rằng một rơle có một thể hoạt động trong 10 năm, điều này có nghĩa là bạn phải
+
+thay thế trung bình một rơle lỗi mỗi
+ngày! Đó là một vấn đề lớn khi bạn
+
+đang chạy một vấn đề quan trọng, một phép tính mất nhiều ngày.
+
+Và đó chưa phải là tất cả những thứ mà kỹ sư phải chiến đấu với. Những chiếc máy khổng lồ, u tối và ấm nóng này
+
+cũng thu hút côn trùng. Tháng 9 năm 1947, các nhà vận hành trên Harvard Mark II đã
+
+bắt được một con bướm chết từ một rơ le hỏng hóc. Grace Hopper, người chúng ta sẽ nói chuyện nhiều hơn trong tập sau, đã ghi chú,
+
+"Từ đó trở đi, khi bất cứ điều gì đã xảy ra với máy tính,
+
+chúng ta nói rằng nó có bọ (bugs) trong đó."
+
+Và đó là lúc thuật ngữ "bọ máy tính" (computer bug) ra đời.
+
+Nhu cầu cho một giải pháp đáng tin cậy thay thế cho rơle điện cơ là điều rõ ràng
+
+để khoa học tính toán sẽ tiến xa hơn,
+và may mắn thay, giải pháp thay thế đó đã tồn tại!
+
+Năm 1904, nhà vật lí người Anh John Ambrose Fleming phát triển một thành phần điện mới được gọi là
+
+đèn nhiệt điện tử, có hai điện cực
+bên trong một cái bóng thủy tinh kín hơi -
+
+đây là ống chân không đầu tiên trong lịch sử. Một trong hai điện cực có thể được sưởi ấm, làm nó phát ra điện tử
+
+- một quá trình gọi là phát xạ nhiệt.
+Điện cực còn lại sau đó có thể thu hút
+
+những điện tử này để tạo ra dòng điện, nhưng chỉ khi nó được tích điện dương
+
+- nếu nó tích điện âm hoặc trung tính, các điện tử sẽ không còn bị thu hút
+
+xuyên qua chân không, và không có dòng điện này sẽ chạy.
+
+Một thành phần điện tử cho phép dòng chảy một chiều
+
+của dòng điện được gọi là một điôt, nhưng điều thực sự cần thiết là một chuyển đổi để giúp
+
+dòng chảy này mở hoặc đóng. May mắn thay, ngay sau đó, năm 1906, nhà phát minh người Mỹ Lee de Forest đã thêm
+
+một điện cực "kiểm soát" thứ ba nằm
+giữa hai điện cực trong thiết kế của Fleming.
+
+Bằng cách áp dụng tích điện tích cực cho điện cực kiểm soát, nó sẽ cho phép dòng chảy
+
+của các điện tử chạy như trước. Nhưng nếu điện cực kiểm soát được tích điện tích âm,
+
+nó sẽ ngăn chặn dòng chảy của các điện tử. Vì vậy, bằng cách thao túng các dây điều khiển, người ta có thể
+
+mở hoặc đóng mạch. Nó khá
+giống như một rơ le - nhưng điều quan trọng là,
+
+ống chân không không có bộ phận chuyển động. Điều này có nghĩa sẽ có ít hao mòn, và quan trọng hơn,
+
+họ có thể chuyển đổi hàng ngàn lần mỗi giây. Những ống chân không ba cực này trở thành
+
+nền tảng của đài phát thanh, điện thoại đường dài, và nhiều thiết bị điện tử khác cho gần một
+
+nửa thế kỷ. Tôi nên lưu ý ở đây rằng, ống chân không không hoàn hảo - chúng khá là
+
+mỏng manh, và có thể cháy như bóng đèn, nó là một cải tiến lớn từ rơ le cơ học.
+
+Ngoài ra, lúc đầu ống chân không rất đắt tiền
+
+- một bộ radio thường chỉ được sử dụng một cái, nhưng một máy tính có thể cần hàng trăm hoặc hàng ngàn thiết bị chuyển mạch điện.
+
+Nhưng đến những năm 1940,
+chi phí và độ tin cậy của chúng đã được cải thiện để
+
+đến mức chúng trở nên khả thi để sử dụng trong máy vi tính .... ít nhất là bởi những người có
+
+nhiều tiền, như các chính phủ. Điều này đánh dấu sự chuyển đổi từ tính toán cơ điện
+
+sang điện toán điện tử. Hãy cùng
+ghé thăm Thought Bubble.
+
+Ứng dụng quy mô lớn đầu tiên của các ống chân không cho máy tính là thiết kế của Colossus Mk 1
+
+bởi kỹ sư Tommy Flowers và hoàn hành trong Tháng 12 năm 1943. Colossus đã được cài đặt
+
+tại Công viên Bletchley, ở Anh, và giúp giải mã thông tin liên lạc Đức quốc xã.
+
+Điều này nghe có vẻ quen thuộc vì hai năm trước khi Alan Turing, thường được gọi là
+
+cha đẻ của khoa học máy tính, đã tạo ra một thiết bị cơ điện, cũng tại Công viên Bletchley, được gọi là
+
+Bombe. Đó là một máy cơ điện
+được thiết kế để giải mã Enigma Đức Quốc xã,
+
+nhưng Bombe không phải là máy tính,  chúng ta sẽ nói về những đóng góp của Alan Turing sau.
+
+Trở lại, phiên bản đầu tiên của Colossus chứa
+
+1.600 ống chân không, và tổng cộng mười Colossi được xây dựng để giúp giải mã.
+
+Colossus được coi là máy tính điện tử có thể lập trình đầu tiên.
+
+Lập trình đã được thực hiện bằng cách cắm hàng trăm dây vào ổ cắm, kiểu như là
+
+ổ cắm ở tổng đài điện thoại, để
+thiết lập máy tính thực hiện các hoạt động mong muốn.
+
+Vì vậy, mặc dù "lập trình được", nó vẫn có cần được thiết lập cấu hình để thực hiện một tính toán cụ thể.
+
+Bộ tích phân số điện tử
+và Máy tính - hoặc ENIAC - đã được hoàn tất
+
+một vài năm sau đó vào năm 1946 tại trường đại học của Pennsylvania.
+
+Thiết kế bởi John Mauchly và J. Preser Eckert, đây là máy tính đa mục tiêu, có thể lập trình được
+
+đầu tiên trên thế giới.
+
+ENIAC có thể thực hiện 5000 phép cộng hoặc phép trừ mười chữ số, nhanh hơn rất rất nhiều
+
+bất kỳ chiếc máy nào đã có trước đó.
+Nó được hoạt động trong mười năm, và được ước tính
+
+đã tính toán số học nhiều hơn toàn bộ
+những gì loài người đã từng làm đến điểm đó.
+
+Nhưng cùng với đó, nhiều ống chân không hỏng là chuyện thông thường, và ENIAC nói chung chỉ hoạt động
+
+khoảng nửa ngày một lần trước khi bị hỏng.
+
+Cảm ơn Thought Bubble. Vào những năm 1950, thậm chí máy tính dựa trên ống chân không đã đạt đến giới hạn của nó.
+
+Máy tính AN/FSQ-7 của Không lực Hoa Kỳ, được hoàn thành vào năm 1955, là một phần của
+
+Hệ thống máy tính phòng không "SAGE", chúng ta sẽ nói thêm ở một tập sau.
+
+Để giảm chi phí và kích cỡ, cũng như cải thiện độ tin cậy và tốc độ, một chuyển đổi điện tử mới cấp tiến
+
+là cần thiết. Năm 1947, các nhà khoa học John Bardeen, Walter Brattain và William Shockley của phòng thì nghiệm Bell (Bell Lab)
+
+đã  phát minh ra bóng bán dẫn,
+và cùng với nó, một kỷ nguyên mới của máy tính được sinh ra!
+
+Vật lý học phía sau bóng bán dẫn này
+khá phức tạp, dựa vào cơ học lượng tử,
+
+vì vậy chúng tôi sẽ chỉ đề cập đến những điều cơ bản.
+
+Một bóng bán dẫn giống như một rơle hoặc ống chân không - đó là một công tắc có thể được mở
+
+hoặc đóng bằng cách áp dụng điện qua dây điều khiển. Thông thường, bóng bán dẫn có
+
+hai điện cực được phân cách bởi một vật liệu đôi khi có thể dẫn điện, và
+
+đôi khi thì kháng lại nó - một chất bán dẫn. Trong trường hợp này, dây điều khiển gắn vào
+
+một cổng "điện cực". Bằng cách thay đổi điện tích của cổng, tính dẫn của
+
+vật liệu bán dẫn có thể được kiểm soát, cho phép dòng điện chaỵ hoặc bị dừng lại -
+
+như sự so sánh vòi nước mà chúng ta đã thảo luận trước đó. Ngay cả bóng bán dẫn đầu tiên ở Bell Labs
+
+cho thấy một tiềm năng to lớn - nó có thể chuyển đổi giữa trạng thái bật và tắt 10.000 lần/giây.
+
+Hơn nữa, không giống như các ống chân không được làm bằng thủy tinh và những thành phần mỏng manh và lơ lửng,
+
+bóng bán dẫn là vật liệu cứng được biết đến như là một thành phần thể rắn.
+
+Gần như ngay lập tức, bóng bán dẫn có thể được làm nhỏ hơn các rơle hoặc các ống chân không nhỏ nhất.
+
+Điều này dẫn đến các máy tính nhỏ hơn và rẻ hơn đáng kể, như IBM 608, được phát hành năm 1957
+
+- máy tính đầu tiên hoàn toàn làm từi bóng bán dẫn, có sẵn trên thị trường.
+
+Nó chứa 3000 bóng bán dẫn và có thể thực hiện 4.500 phép cộng, hoặc khoảng
+
+80 phép nhân hoặc chia, mỗi giây.
+IBM sớm chuyển đổi tất cả các sản phẩm dùng để tính toán của mình
+
+thành bóng bán dẫn, đưa máy tính dựa trên bóng bán dẫn vào những văn phòng, và cuối cùng, hộ gia đình.
+
+Ngày nay, máy tính sử dụng bóng bán dẫn nhỏ hơn 50 nanô mét về kích thước -
+
+để bạn hình dung rõ hơn, một tờ giấy dày khoảng 100.000 nanomet. Và chúng không chỉ nhỏ một cách khó tin,
+
+mà còn cực kỳ nhanh - chúng có thể chuyển đổi trạng thái hàng triệu lần mỗi giây, và có thể chạy trong nhiều thập kỷ.
+
+Rất nhiều sự phát triển bóng bán dẫn và chất bán dẫn này đã diễn ra ở thung lũng Santa Clara,
+
+giữa San Francisco và San Jose, California.
+
+Vì vật liệu phổ biến nhất được sử dụng để tạo ra chất bán dẫn là silicon, khu vực này
+
+nhanh chóng trở thành thung lũng Silicon. Thậm chí William Shockley đã chuyển đến đó, sáng lập
+
+Shockley Semiconductor, có những nhân viên sau này đã thành lập
+
+Fairchild Semiconductors, có nhân những viên sau đó đã thành lập
+
+Intel - nhà sản xuất chip máy tính lớn nhất thế giới ngày hôm nay.
+
+Ok, chúng ta đã đi từ rơ le sang ống chân không đến bóng bán dẫn. Chúng ta có thể thực sự tắt và mở điện
+
+một cách rất rất rất rất nhanh. Nhưng
+làm thế nào chúng ta đi từ bóng bán dẫn đến thực sự
+
+tính toán một thứ gì đó, đặc biệt là nếu chúng ta không có động cơ và bánh răng?
+
+Đó là những gì chúng ta sẽ đề cập đến trong vài tập tiếp theo.
+
+Cảm ơn đã xem. Gặp lại bạn vào tuần tới.
+
