@@ -364,7 +364,7 @@ remember: we’re still making sure our idea
 is good and talking with potential customers.
 
 This is NOT the finance stage.
-
+---------------------------------------------------
 We aren’t asking people for seed money…
 yet.
 
@@ -414,7 +414,7 @@ Let’s explore the canvas using a little
 company you’ve probably never heard of:
 
 Netflix.
-
+--------------------------------------------------
 For each section, we need to answer a key
 question.
 
@@ -441,7 +441,7 @@ came from subscribers outside the U.S.
 
 They use internal algorithms to predict and
 offer certain programs to certain demographics.
-
+---------------------------------------------
 Once we decide who our customers are, it’s
 time to define the relationship in the Customer
 

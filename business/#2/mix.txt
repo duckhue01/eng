@@ -346,8 +346,8 @@ remember: we’re still making sure our idea
 is good and talking with potential customers.
 
 This is NOT the finance stage.
-
-We aren’t asking people for seed money…
+---------------------------------------------------
+We aren’t asking people for tien von…
 yet.
 
 The next step in workshopping an idea is to
@@ -358,7 +358,7 @@ your business.
 And a great way to do that is with a business
 plan tool like the Business Model Canvas,
 
-a lean startup template created by a company
+mot mau khoi nghiep tinh gon created by a company
 called Strategyzer.
 
 Ok cool, yeah, I’ll fill that out in a second.
@@ -366,9 +366,9 @@ Ok cool, yeah, I’ll fill that out in a second.
 I’m just finishing page 22 of my business
 plan where I discuss exactly which bees will
 
-provide the honey I use to sweeten the tea
-in my swanky cat cafe.
-
+provide the honey I use to lam ngot tra trong quan ca phe
+meo long lay cua minh
+----------------------------------------------
 Hate to break it to you, but the days of 30-page
 business plans are pretty much over -- even
 
@@ -396,18 +396,18 @@ Let’s explore the canvas using a little
 company you’ve probably never heard of:
 
 Netflix.
-
+-----------------------------------------------
 For each section, we need to answer a key
 question.
 
-We’ll start with Value Proposition: What
+We’ll start with de gia tri: What
 is the value we deliver to our customers?
 
 Basically, why do they want whatever we’re
 selling?
 
-Netflix leverages technology for global audiences
-who want on-demand, customized entertainment.
+Netflix thuc day cong nghe for global audiences
+who want giai tri theo yeu cau, tuy chinh.
 
 Next, we move to the cluster for customers.
 
@@ -415,30 +415,30 @@ Let’s think about our people in three pieces.
 
 First, who even are they?
 
-All the types of people interested in our
-product form the Customer Segments section.
+tat ca cac loai khach hang quan tam den san pham
+cua chung ta tao nen phan phan doan khach hang
 
 In 2019, over 50% of Netflix’s business
 came from subscribers outside the U.S.
 
 They use internal algorithms to predict and
 offer certain programs to certain demographics.
-
-Once we decide who our customers are, it’s
+----------------------------------------------------
+mot khi chung ta xac dinh duoc khach hang cua
+minh la ai , it’s
 time to define the relationship in the Customer
 
 Relationships section.
 
-What type of relationship do our customers
-expect us to establish?
+loai moi quan he nao ma khach hang mong doi chung 
+ta thiet lap?
 
 Netflix customers expect quality programming,
-good predictive suggestions, excellent customer
+de xuat du doan tot, excellent customer
 
-service, and high-end technology performance.
+service,va hieu xuat cong nghe cao cap.
 
-And then, through what Channels are we going
-to speak to them?
+And then,thong qua kenh nao chung ta noi chuyen voi ho?
 
 How are we reaching our customers?
 
@@ -449,7 +449,7 @@ media campaigns to communicate with customers
 
 Now that we know the “who,” we need to
 describe the infrastructure of our business,
-
+--------------------------------------------------
 which also has three pieces.
 
 To start with the basics, what do we actually
@@ -457,7 +457,7 @@ do?
 
 These are our Key Activities.
 
-Netflix licenses existing content and creates
+Netflix cap phep cho noi dung san co and creates
 their own that they deliver through an online
 
 platform.
@@ -472,7 +472,7 @@ These are our Key Resources.
 
 Netflix relies on SO MANY resources to keep
 their massive wheels turning.
-
+------------------------------------------
 They have people making content including
 their in-house studios, engineers to make
 
@@ -502,11 +502,11 @@ Finally, after we’ve figured out the who
 and the what of our business model, we have
 
 to think about the money.
-
+------------------------------------
 Half of that is our Revenue Streams.
 
 Where are we making money?
-
+ 
 What are customers willing to pay for each
 product or service?
 
