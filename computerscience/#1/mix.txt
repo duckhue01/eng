@@ -1,18 +1,19 @@
 Hello world, I’m Carrie Anne, and welcome
 to CrashCourse Computer Science!
 
-trong suot loat bai nay, we’re going
+Over the course of this series, we’re going
 to go from bits, bytes, transistors and logic
 
 gates, all the way to Operating Systems, Virtual
 Reality and Robots!
 
 We’re going to cover a lot, but just to
-lam ro rang moi thu - we ARE NOT going to teach
+clear things up - we ARE NOT going to teach
+
 you how to program.
 
 Instead, we’re going to explore a range
-of computing topics nhu mot linh vuc and a
+of computing topics as a discipline and a
 
 technology.
 
@@ -21,54 +22,54 @@ Computers are the lifeblood of today’s world.
 If they were to suddenly turn off, all at
 once, the power grid would shut down, cars
 
-would crash, planes would fall, nha may xu li 
-nuoc would stop, thi truong chung khoan would freeze,
+would crash, planes would fall, water treatment
+plants would stop, stock markets would freeze,
 
-xe tai cho thuc an wouldn’t know where to
+trucks with food wouldn’t know where to
 deliver, and employees wouldn’t get paid.
-
+===================================================
 Even many non-computer objects - like DFTBA
 shirts and the chair I’m sitting on – are
 
 made in factories run by computers.
 
-Computing really da bien doi nearly every
+Computing really has transformed nearly every
 aspect of our lives.
 
 And this isn’t the first time we’ve seen
-loai thay doi toan cau do  cong nghe dinh huong nay.
+this sort of technology-driven global change.
 
-nhung tien bo trong san suat during the Industrial
-Revolution mang lai mot quy mo moi cho nen van minh nhan loai
+Advances in manufacturing during the Industrial
+Revolution brought a new scale to human civilization
 
-- in agriculture, industry and doi song trong nuoc.
+- in agriculture, industry and domestic life.
 
-co gioi hoa meant thu hoach vuot troi and
-more food, hang hoa san xuat hang loat, cheaper and
+Mechanization meant thu hoach vuot troi and
+more food, hang hoa duoc san xuat hang loat, cheaper and
 
 faster travel and communication, and usually
 a better quality of life.
 
 And computing technology is doing the same
-right now – from canh tac tu dong and medical
+right now – from automated farming and medical
 
-equipment, to vien thong toan cau and
-educational opportunities, and nhung linh vuc moi
+equipment, to global telecommunication and
+educational opportunities, and new frontiers
 
 like Virtual Reality and Self Driving Cars.
-
+=============================================
 We are living in a time likely to be remembered
 as the Electronic Age.
 
 With billions of transistors in just your
-smartphones, computers can co ve nhu kha phuc tap,
+smartphones, computers can seem pretty complicated,
 
 but really, they’re just simple machines
 that perform complex actions through many
 
 layers of abstraction.
 
-So in this series, we’re going pha vo
+So in this series, we’re going break down
 those layers, and build up from simple 1’s
 
 and 0’s, to logic units, CPUs, operating
@@ -80,62 +81,62 @@ buying t-shirts on a webpage doesn’t need
 to know how that webpage was programmed, or
 the web designer doesn’t need to know how
 
-tat ca cac goi duoc dinh tuyen, or router engineers
+all the packets are routed, or router engineers
 don’t need to know about transistor logic,
 
-this series will xay dung tren tap truoc
+this series will build on previous episodes
 but not be dependent on them.
-
+============================================
 By the end of this series, I hope that you
-can ngu canh hoa tot hon vai tro cua may tinh
+can better contextualize computing’s role
 
-both in your own life and society, and cach phat
-minh vi dai nhat cua nhan loai(duoc cho la) is
+both in your own life and society, and how
+nhung sang kien duoc cho la vi dai nhat cua 
+nhan loai is
 
-just in its infancy, voi nhung tac dong lon chua
-duoc xay ra.
- 
+just in its infancy, with its biggest impacts
+yet to come.
+
 But before we get into all that, we should
 start at nguon goc cua may tinh, because although
 
-electronic computers are tuong doi moi, the
+electronic computers are kha moi, the
 need for computation is not.
 
-INTRO
-
-thiet bi may tin hduoc cong nhan som nhat 
+thiet bi may tinh duoc cong nhan som nhat
 
 was the abacus, invented in Mesopotamia around
 2500 BCE.
 
-It’s ve co ban  la mot may tinh duoc van hanh bang tay,
+no ve co ban la mot may tinh van hanh bang tay,
 that helps add and subtract many numbers.
 
 It also stores the current state of the computation,
 much like your hard drive does today.
-
-The abacus was created because, quy mo cua xa hoi
-da tro len lon than what a
+============================================
+The abacus was created because, the scale
+of society had become greater than what a
 
 single person could keep and manipulate in
 their mind.
 
 There might be thousands of people in a village
-or hang muoi nghin cin gia suc.
+or tens of thousands of cattle.
 
-There are nhieu bien the cua ban tinh, but
-let’s look at a really basic version with     
+co nhieu loai bien the cua ban tinh, but
+let’s look at a really basic version with
 
-each row dai dien cho mot luy thua cua muoi khac nhau.
+each row representing a different power of
+ten.
 
-So each bead on the bottom row represents
+So moi hat on the bottom row represents
 a single unit, in the next row they represent
 
 10, the row above 100, and so on.
 
 Let’s say we have 3 heads of cattle represented
 by 3 beads on the bottom row on the right side.
-
+=====================================================
 If we were to buy 4 more cattle we would just
 slide 4 more beads to the right for a total of 7.
 
@@ -148,7 +149,7 @@ on the second row to the right, representing
 ten, and then add the final 2 beads on the
 bottom row for a total of 12.
 
-dieu nay dac biet huu ich voi so luong lon.
+This is particularly useful with large numbers.
 
 So if we were to add 1,251 we would just add
 1 to the bottom row, 5 to the second row,
@@ -157,40 +158,43 @@ So if we were to add 1,251 we would just add
 - we don’t have to add in our head and the
 
 abacus stores the total for us.
-
+===============================================
 Over the next 4000 years, humans developed
-rat nhieu cac loai thiet bi tinh toan, like
+all sorts of clever computing devices, like
 
-the astrolabe, which enabled ships to calculate
-vi do cua ho at sea.
+the thien van, which enabled ships to calculate
+their vi do at sea.
 
-Or the slide rule, de ho tro nhan va chia.
+Or the slide rule, for assisting with multiplication
+and division.
 
-And thuc su co hang tram loai dong ho
-duoc tao ra that could be used to calculate
+And there are literally hundred of types of
+clocks created that could be used to calculate
 
-sunrise, tides, vi tri cua cac tinh the,
+sunrise, thuy trieu, positions of thien the,
 and even just the time.
 
 Each one of these devices made something that
-was truoc day mat nhieu cong suc de tinh toan much
+was truoc day ton nhieu cong suc de tinh toan much
 
-faster, easier, and thuogn chinh xac hon –– no ha thap rao can de dat dau, and at the same
+faster, easier, and often more accurate –– it
+ha thap rap can de ra nhap, and at the same
 
-time, khuech dai nang luc tri tue cua chung ta –– take
-note, this is a theme we’re going to de cap nhieu trong
-serie nay.
+time, khuech dai our mental abilities –– take
+note, this is a theme we’re going to de cap
 
-As nguoi tien phong ve may tinh dau tien Charles Babbage
-said: “At moi su gia tang ve kien thuc, as
+on a lot in this series.
+=================================================
+As early computer pioneer Charles Babbage
+said: “At each increase of knowledge, as
 
-well as on su tien loi cua moi cong cu moi,
-cong suc lao dong cua con nguoi duoc giam di”
+well as on the contrivance of every new tool,
+human labour becomes abridged.”
 
 However, none of these devices were called
 “computers”.
 
-The viec su dung tu "may tinh" duoc ghi nhan som nhat
+The earliest documented use of the word “computer”
 is from 1613, in a book by Richard Braithwait.
 
 And it wasn’t a machine at all - it was
@@ -206,13 +210,13 @@ In those days, computer was a person who did
 calculations, sometimes with the help of machines,
 
 but often not.
-
-This job title persisted until the late 1800s,
+===================================================
+chuc danh cong viec nay van ton tai cho den the late 1800s,
 when the meaning of computer started shifting
 
 to refer to devices.
 
-Notable among these devices was the Step Reckoner,
+dang chu y trong nhung thiet bi nay was the Step Reckoner,
 built by German polymath Gottfried Leibniz
 
 in 1694.
@@ -232,7 +236,7 @@ The device had a series of gears that turned;
 each gear had ten teeth, to represent the
 
 digits from 0 to 9.
-
+================================================
 Whenever a gear bypassed nine, it rotated
 back to 0 and advanced the adjacent gear by one tooth.
 
@@ -257,7 +261,7 @@ and then we can’t subtract any more 5’s…
 so we know 5 goes into 17 three times, with
 
 2 left over.
-
+=============================================
 The Step Reckoner was able to do this in an
 automated way, and was the first machine that
 
@@ -274,7 +278,7 @@ of computation before an answer was determined.
 It could take hours or days to generate a
 single result.
 
-Also, these hand-crafted machines were expensive,
+Also, these nhung chiec may duoc lam thu cong were expensive,
 and not accessible to most of the population.
 
 So, before 20th century, most people experienced
@@ -282,7 +286,7 @@ computing through pre-computed tables assembled
 
 by those amazing “human computers” we
 talked about.
-
+=====================================================
 So if you needed to know the square root of
 8 million 6 hundred and 75 thousand 3 hundred
 
@@ -292,25 +296,25 @@ your step reckoner, you could look it up in
 a huge book full of square root tables in
 a minute or so.
 
-Speed and accuracy is particularly important
+toc do va do chinh xac is particularly important
 on the battlefield, and so militaries were
 
 among the first to apply computing to complex
 problems.
 
-A particularly difficult problem is accurately
-firing artillery shells, which by the 1800s
+A particularly difficult problem is ban dan dai bac
+mot cach chinh xac, which by the 1800s
 
 could travel well over a kilometer (or a bit
 more than half a mile).
 
-Add to this varying wind conditions, temperature,
-and atmospheric pressure, and even hitting
+Add to this nhung dieu kien gio thay doi, temperature,
+and ap suat khong, and even hitting
 
 something as large as a ship was difficult.
-
+============================================
 Range Tables were created that allowed gunners
-to look up environmental conditions and the
+to look up kieu kien moi truong and the
 
 distance they wanted to fire, and the table
 would tell them the angle to set the canon.
@@ -322,7 +326,7 @@ The problem was, if you changed the design
 of the cannon or of the shell, a whole new
 
 table had to be computed, which was massively
-time consuming and inevitably led to errors.
+time consuming and tat yeu dan den sai sot
 
 Charles Babbage acknowledged this problem
 in 1822 in a paper to the Royal Astronomical
@@ -333,8 +337,8 @@ of machinery to the computation of astronomical
 and mathematical tables".
 
 Let’s go to the thought bubble.
-
-Charles Babbage proposed a new mechanical
+=============================================
+Charles Babbage de xuat a new mechanical
 device called the Difference Engine, a much
 
 more complex machine that could approximate
@@ -348,15 +352,13 @@ or amount of pizza Carrie Anne eats and happiness.
 Polynomials could also be used to approximate
 logarithmic and trigonometric functions, which
 
-are a real hassle to calculate by hand.
+are a thuc su rac roi to calculate by hand.
 
 Babbage started construction in 1823, and
-over the next two decades, tried to fabricate
-
-and assemble the 25,000 components, collectively
-weighing around 15 tons.
-
-Unfortunately, the project was ultimately abandoned.
+over the next two decades, co gang che tao va lap rap
+the 25,000 components, tong trong luong khoan 15 tan.
+=================================================
+Unfortunately, the project cuoi cung da bi bo roi.
 
 But, in 1991, historians finished constructing
 a Difference Engine based on Babbage's drawings
@@ -380,18 +382,17 @@ one particular computation; it could be given
 
 data and run operations in sequence; it had
 memory and even a primitive printer.
-
-Like the Difference Engine, it was ahead of
-its time, and was never fully constructed.
+==================================================
+Like the Difference Engine,no da di truoc thoi dai
+, and was never fully constructed.
 
 However, the idea of an “automatic computer”
-– one that could guide itself through a
+– mot thu co the huong dan chinh no thong qua mot
+loat cac hoat dong tu dong, was a
+huge deal, and would thong bao truoc computer programs.
 
-series of operations automatically, was a
-huge deal, and would foreshadow computer programs.
-
-English mathematician Ada Lovelace wrote hypothetical
-programs for the Analytical Engine, saying,
+English mathematician Ada Lovelace wrote chuong trinh
+gia dinh for the Analytical Engine, saying,
 
 “A new, a vast, and a powerful language
 is developed for the future use of analysis.”
@@ -404,7 +405,7 @@ the first generation of computer scientists,
 
 who incorporated many of Babbage’s ideas
 in their machines.
-
+================================================
 This is why Babbage is often considered the
 "father of computing".
 
@@ -417,21 +418,19 @@ in the sciences and engineering, but rarely
 seen in business, government or domestic life.
 
 However, the US government faced a serious
-problem for its 1890 census that demanded
+problem for its 1890 census that doi hoi hieu
+qua ma chi may tinh co the cung cap
 
-the kind of efficiency that only computers
-could provide.
-
-The US Constitution requires that a census
+The US hien phap requires that a census
 be conducted every ten years, for the purposes
 
-of distributing federal funds, representation
+of phan phoi quy lien bang, representation
 in congress, and good stuff like that.
 
 And by 1880, the US population was booming,
 mostly due to immigration.
-
-That census took seven years to manually compile
+===============================================
+That cuoc dieu tra dan so took seven years to bien soan thu cong
 and by the time it was completed, it was already
 
 out of date – and it was predicted that
@@ -444,24 +443,24 @@ The Census bureau turned to Herman Hollerith,
 who had built a tabulating machine.
 
 His machine was “electro-mechanical” – it
-used traditional mechanical systems for keeping
+used he trong co truyen thong for keeping
 
 count, like Leibniz’s Step Reckoner –– but
-coupled them with electrically-powered components.
+coupled them with thanh phan duoc chay bang dien.
 
-Hollerith’s machine used punch cards which
+Hollerith’s machine used nhung the lo which
 were paper cards with a grid of locations
 
 that can be punched out to represent data.
 
 For example, there was a series of holes for
-marital status.
-
+tinh trang hon nhan.
+=================================================
 If you were married, you would punch out the
 married spot, then when the card was inserted
 
-into Hollerith’s machine, little metal pins
-would come down over the card – if a spot
+into Hollerith’s machine, cac chot kim loai nho se
+cam xuogn the – if a spot
 
 was punched out, the pin would pass through
 the hole in the paper and into a little vial
@@ -478,14 +477,14 @@ than manual tabulations, and the Census was
 
 completed in just two and a half years - saving
 the census office millions of dollars.
-
+==================================================
 Businesses began recognizing the value of
 computing, and saw its potential to boost
 
 profits by improving labor- and data-intensive
-tasks, like accounting, insurance appraisals,
+tasks, like accounting, tham dinh bao hiem,
 
-and inventory management.
+and quan li hang ton kho.
 
 To meet this demand, Hollerith founded The
 Tabulating Machine Company, which later merged

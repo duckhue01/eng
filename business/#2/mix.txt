@@ -1,5 +1,5 @@
 cho du do la bong den co dien o tren dau chung ta
- or a “Eureka!” moment, chung toi tuong tuong y tuong nay
+or a “Eureka!” moment, chung toi tuong tuong y tuong nay
 ra tu bo nao cua nhung nguoi sang tao 
  -- like we all live in some cartoon
 
@@ -36,7 +36,7 @@ thanh hien thuc.
 
 Looking back at the people we now think of
 as great entrepreneurs, nhung nguoi nay chi dang tim 
-cach lam cho cuoc song de dang hon hoc tot hon those
+cach lam cho cuoc song de dang hon hoac tot hon bang
 mot cach nao do -- from inventing the wheel to
 
 dreaming up the dishwasher.
@@ -77,7 +77,7 @@ Next, there are complaints.
 There must be something that bugs you, whether
 do la tai nghe roi hay thieu phim do phu nu lam dao dien.
 
-dropbox duoc thanh lap vi mot nguoi nao do kho chiu vi
+dropbox duoc thanh lap vi mot nguoi nao do kho chiu,
 ho lien tuc quen usb cua ho
 
 Under Armour was founded because ai do cam thay met moi
@@ -97,7 +97,7 @@ And, of course, there are the “I can do
 it better” ideas.
 
 Everyone has them!
-
+=============================================================
 cai toi cua chung ta la mot noi tuyet voi de tim kiem su doi moi
 va dong luc
 
@@ -149,7 +149,7 @@ and a whole complicated life.
 And these are the nen tang cua su doi moi khoi nghiep.
 -------------------------------------------------------
 vi vay buoc dau tien la thua nhan rang ban co 
-mo y tuong
+mot y tuong
 
 Step two is understanding the problem at the
 root of your idea.
@@ -204,7 +204,7 @@ Sorry, I got a little dramatic there.
 -----------------------------------------------
 khi  chung ta co nhung y tuong moi thu vi, ban 
 nang dau tien cua chung ta la loai bo chung de
-khong ai co the dang cap chung
+khong ai co the danh cap chung
 
 But that’s bad.
 
@@ -297,8 +297,8 @@ Your trusted friends?
 ------------------------------------------------------
 Everyone on your morning bus ride?
 
-rot cuoc, mot chiec xe byt chiec xe limo day nhung nguoi
-ban chua tung gap
+rot cuoc, mot chiec xe byt chi la chiec xe limo day nhung
+nguoi ban chua tung gap
 
 It depends on the idea, but generally at this
 early stage, we want to target two main types
@@ -308,7 +308,7 @@ of people.
 First,nhung khach hang nguoi co the gap su co ma chung ta
 dang co gang giai quyet.
 
-And second,nguoi nguoi co the co the giup chung ta suy nghi
+And second,nguoi  co the co the giup chung ta suy nghi
 thau dao y tuong cua minh
 
 We can also look to professionals who might
