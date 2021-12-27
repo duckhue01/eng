@@ -47,7 +47,7 @@ but here’s the trick: the words usually
 have pretty nghia den.
 
 Since value means worth, a Value Proposition
-is gia you ban cung cap cho khach hang cua ban.
+is gia tri ban cung cap cho khach hang cua ban.
 =======================================
 Typically, a value proposition is a sentence
 or paragraph that trinh bay ro rang what
@@ -151,14 +151,15 @@ everyday life, and what problems do they have?
 Number 2: What pains do they experience, like
 risks, tro ngai, or bad outcomes?
 
-And number 3: nhung loi ich tich cu nao ma ho dang tim kiem va 
+And number 3: nhung loi ich tich cuc nao ma ho dang tim kiem va 
 nhan duoc?
 
 Everyone is trying to maximize gains and minimize
 pains, or at least dat duoc su can bang lanh manh.
 
-So we entrepreneurs can try to tip the scales
-towards gains.
+
+vi vay doanh nhan chung ta co the nang cao quy mo
+de dat duoc loi nhuan
 
 After considering the customer experience,
 chung ta co the huong su chu y vao doanh nghiep tiem nang cua
@@ -184,11 +185,10 @@ of writing a value proposition, shall we?
 In order to figure out the jobs, pains, and
 gains of our customers, we have to find them
 
-and get nosy about their lives.
+and to mo ve cuoc song cua ho
 
 But keep it professional -- this is entrepreneurship!
-Leave your Facebook stalking skills out of
-it.
+loai bo ki nang theo doi facebook cua ban ra khoi no
 =====================================================
 Some might call this research finding your
 target market, nhung nguoi co nhieu kha nang 
@@ -202,9 +202,8 @@ groups, or thuc hien khao sat truc tiep hoac thong
 qua mot dich vu truc tuyen SurveyMonkey.
 
 Remember, the goal is to learn from potential
-customers to turn your idea into a top-notch
-
-solution to a problem,
+customers to turn your idea into a giai phap hang dau 
+cho mot van de,
 
 whether you’re working on spill-proof takeout
 containers or more affordable childcare.
@@ -403,30 +402,29 @@ customers, we’ve filled out half of our
 Value Proposition Canvas.
 
 Or you can sort all that knowledge with one
-of those conspiracy investigation walls with
+of those nhung buc tuong dieu tra am muu with
 
-pushpins, multiple colors of string, and newspaper
-clippings.
+pushpins, multiple colors of string, and mau bao.
 
 You do you.
 
 It’s your value proposition.
 
-Using all this info, we can prune our big
-entrepreneurial idea to make sure our products
+Using all this info, chung ta co the cat tai
+y tuong kinh doanh lon cua minh to make sure our products
 
-and services are truly alleviating pains,
+and services are thuc su lam giam bot loi dau,
 creating gains, and adding value to people’s
 
 lives.
-
+=============================================
 Once we’ve done this, our value proposition
-will be flourishing.
+se phat trien manh me.
 
 To see how, let’s go to the Thought Bubble.
 
 Stitch Fix is a personal styling service that
-sends clothes and accessories to people.
+gui quan ao va phu kien cho moi nguoi.
 
 It has customers all across the U.S. and soon
 across the U.K.
@@ -435,18 +433,17 @@ Those customers have many jobs to do, but
 an obvious one is to shop for clothes.
 
 Let’s think of Stitch Fix customers as busy,
-technology-savvy people ages 25-50 living
+nhung nguoi hieu biet ve cong nghe co tuoi 25-50 living
 
 in the U.S., of all genders, and working across
 all fields.
 
-And they’ve been willing to consistently
-spend some money on fashion.
-
+And ho luon san sang chi mot so tien cho thoi trang.
+================================================
 They might be pained by lots of things, like
 no time as they try to juggle work and family,
 
-a limited budget, living far from clothing
+ngan sach han hep, living far from clothing
 stores, or having no idea what their “body
 
 type” is.
@@ -458,16 +455,16 @@ Apple?
 ...Pineapple?
 
 After exploring their target market, Stitch
-Fix offers pain relievers like a mobile app
+Fix offers thuoc giam dau like a mobile app
 
-for convenience, different packages for different
-budgets,
+for convenience, nhung goi khac nhau cho cac 
+ngan sach khac nhau,
 
 doorstep delivery, an easy return system,
-and personally styled wardrobes for different
+and tu quan ao thiet ke theo cao nhan for different
 
 body types.
-
+=============================================
 Now, these customers might shop for clothes
 because they want gains of looking good and
 
@@ -476,28 +473,27 @@ feeling confident in and out of the workplace.
 So Stitch Fix wants to deliver that gain.
 
 But they also create new gains using technology,
-like their surveys for measurements and preferences,
+like nhung khao sat cua ho ve do luong va so thich,
 
 algorithms,
 
 and personal stylists to help their customers
 feel good about the clothes they get and save
 
-time by not wandering around a mall.
-
+time by khong lang thang xung quanh a mall
+=============================================
 Combining all this information, Stitch Fix
-came up with the elegant value proposition:
+da dua ra de xuat gia tri thanh lich:
 
 “We save our clients time by doing the shopping.”
 
 If we were to get a little more detailed for
-them, we might say, “Stitch Fix leverages
+them, we might say, “Stitch Fix tan dung cong nghe
+to save thoi gian lam viec cua khach hang by
+using personalized measurements, so thich,
 
-technology to save working clients time by
-using personalized measurements, preferences,
-
-and stylists to shop for clothes, which are
-delivered straight to their doors.”
+and stylists to shop for clothes, duoc giao
+thang den cua nha ho.”
 
 Thanks, Thought Bubble!
 
@@ -505,34 +501,34 @@ After all this thinking and research, our
 value proposition is done.
 
 So when you’re asked “What are you worth?”,
-squish down that panic.
+giam bot su hoang loan do.
 
-You put in the work, so show ‘em what you’ve
+ban da no luc het minh, so show ‘em what you’ve
 got.
-
+=============================================
 Anna 1: So… what are you worth?
 
 Anna 2: My audience values entertainment and
-authentic connection.
+ket noi dich thuc
 
-So I use writing, acting, motion graphics,
+So I use writing, acting,do hoa chuyen dong,
 and music to tell stories that make people
 
-feel less alone and highlight the complexities
-of the human experience.
+feel less alone and lam noi bat su phuc tap 
+cua trai nghiem con nguoi.
 
 Also cats.
 
 Today, we learned about value and how customer-driven
-thinking can help us show off what our business
+thinking can help us the hien what our business
 
 has to offer.
 
 By understanding customer jobs, pains, and
 gains, we can make sure our products and services
 
-alleviate pains or create gains.
-
+giam bot noi dau va tao ra loi nhuan
+===============================================
 And then -- boom -- we have a value proposition,
 a statement basically saying why we’re better
 
@@ -548,16 +544,7 @@ you’re competing with in this entrepreneurship
 arena, and what can be learned from observing
 them.
 
-Thanks for watching Crash Course Business, sponsored by Google. And thank you to Thought Cafe for the graphics.
+Thanks for watching Crash Course Business, sponsored by Google. 
+And thank you to Thought Cafe for the graphics.
 
-If you want to help keep Crash Course free
-for everybody, forever, you can join our community
-
-on Patreon.
-
-And if you want to learn more about how to
-collect data to understand people, check out
-
-this Crash Course Sociology video about research
-methods.
 
