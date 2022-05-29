@@ -1,0 +1,1926 @@
+alright hey everyone thanks for coming
+
+in join me we'll go ahead and get
+
+started my name is Brian Hughes I'm a
+
+Technical Evangelist at Microsoft these
+
+days and today we're gonna talk about
+
+the node.js event loop and we're
+
+specifically going to talk about how
+
+like asynchronous works in nodejs and
+
+what that means for performance
+
+especially how it relates to
+
+multi-threading so first we're gonna go
+
+through kind of a history of
+
+multitasking and talk about what it
+
+really is I think a lot of us have you
+
+know at least a vague idea of what
+
+multitasking and multi-threading is but
+
+there's some nuance that I think is
+
+important to really understand for the
+
+purpose of this talk so if we go way
+
+back in time we only had a single
+
+process at least in the personal PC
+
+world so if we think back to the days of
+
+ms-dos or the original Apple OS unlike
+
+the Apple to see and things like that
+
+before the Mac now these are
+
+command-line interfaces and in these
+
+they only had the ability to run a
+
+single thing at a time there was no
+
+concept of running more than one piece
+
+of code at the same time there were no
+
+background tasks there was no running
+
+multiple programs you know you would
+
+start up dust and dust yeah every
+
+operating system is a program in and of
+
+itself so that program would kind of run
+
+and you would tell it to run another
+
+program so that would stop the OS would
+
+actually stop running and you would
+
+start running another application now
+
+what Rondon when it was done it would
+
+actually start back up the OS again and
+
+so this is super super limited and we
+
+know we wanted the ability to run
+
+multiple things at a time so he created
+
+this concept called cooperative
+
+multitasking and this made the world
+
+quite a bit better and so this is a
+
+model of being able to run more than one
+
+program at the same time we first saw
+
+this introduction in kind of the early
+
+PC computing days with the early days of
+
+both Windows and the early Mac OS
+
+systems it's the way that cooperative
+
+multitasking works is you have an
+
+application and this is kind of going
+
+along and is kind of running doing its
+
+thing and eventually get to a point
+
+where the app will say all right I can
+
+go ahead and take a break now and this
+
+would happen that in the application you
+
+would usually call a method called yield
+
+there's a few other variants that would
+
+do the same thing but basically you know
+
+the application would actually have code
+
+that was written into it they would say
+
+okay I can
+
+now and we can let something else run
+
+and so when an application called yield
+
+you know that would signal back to the
+
+operating system who'd start up running
+
+again and be like okay this one is done
+
+who else who needs to run next and even
+
+go and run something else there's
+
+nothing else to run then you would give
+
+the operating system itself a chance to
+
+run but of course there is a flaw in
+
+this that you may have already noticed
+
+this is dependent on the user's
+
+application actually calling yield if
+
+the application didn't call yield then
+
+what that mean is that single
+
+application would just keep running and
+
+running and running and it wouldn't give
+
+anything else a chance to run so for
+
+those of you who remember the windows
+
+like 95 and 98 days you know you would
+
+get an application that would start in
+
+this behaving say the application would
+
+crash or something like that when that
+
+happened though it wouldn't just cause
+
+the app to crash you would take your
+
+entire system down with it you probably
+
+never be able to grab a window that was
+
+frozen and like move it around on the
+
+screen it would ghost and just
+
+completely destroy your entire display
+
+well this is actually the reason why
+
+under the hood it's because all of the
+
+versions of Windows that were based on
+
+DOS as well as all of the original
+
+versions of Mac OS up through Mac OS 9
+
+use this system and so when an app
+
+misbehaved there's no way for the
+
+operating system to recover from that
+
+and so like now this is an improvement
+
+we can run multiple things but you know
+
+it had problems iam instability being
+
+the primary reason so we wanted to do
+
+something better and so that's whenever
+
+we came up with this idea of pre-emptive
+
+multitasking and so a pre-emptive
+
+multitasking it works a little different
+
+so no longer are we reliant on an
+
+application saying hey I can go on pause
+
+now instead the operating system itself
+
+runs in such a way that it has the
+
+ability to pause any given application
+
+at any time so it will pause an
+
+application it'll save its state it will
+
+take all of the memory that's like you
+
+know and your CPU registers and things
+
+like that and save it somewhere else you
+
+know it'll pull that out and then it'll
+
+load another application in its place
+
+and so now with this the operating
+
+system is handling everything it's not
+
+dependent on user code at all and a
+
+preemptive multitasking have been around
+
+for a long time in like the UNIX world
+
+and especially in the mainframe world
+
+but it's made its way into the personal
+
+computing world a little bit later you
+
+know so Microsoft first introduced this
+
+with the windows in
+
+he colonel indeed this is one of the big
+
+selling points of Windows NT for that
+
+made it really popular among businesses
+
+is that you could say you know a
+
+misbehaving application won't crash your
+
+operating system you made a lot more
+
+secure and a lot more stable and so like
+
+Windows NT 4 had this at Windows 2000
+
+and then most importantly was Windows XP
+
+so when Windows XP was released it was a
+
+consumer OS targeted towards everyone
+
+but it actually used this server kernel
+
+you know I used the NT kernel that came
+
+from 2000 and NT 4 not from windows 95
+
+98 nme and so it all of a sudden windows
+
+got a lot more stable and this the same
+
+story in the Mac world whenever Apple
+
+decided to completely rewrite their OS
+
+for Mac OS version 1004 inten point o
+
+was a complete rewrite you know they got
+
+rid of all of the old Mac OS and they
+
+replaced it with what was basically next
+
+step which was an evolution of FreeBSD
+
+and so now with these OS as we finally
+
+had printed multitasking and things got
+
+quite a bit more stable and more
+
+performant and safer and all of these
+
+things that happen around it and so
+
+whenever we really know the CPU is like
+
+you know doing preempted multitasking
+
+you know the US has got like pausing one
+
+app saving its state allowing another to
+
+run and actually like flip back and
+
+forth between two or more applications
+
+and does this pretty regularly
+
+and it causes these applications to
+
+become sort of interleaved so even
+
+though this could be running on a single
+
+CPU because when these os's were written
+
+you know there was only single core CPUs
+
+it still made it look like we were
+
+running a whole bunch of applications at
+
+the same time it was basically a way of
+
+faking it and so like this like she
+
+works pretty well and we still have
+
+pre-emptive multitasking kernels today
+
+but there was another evolution that
+
+came on a little later that made things
+
+even better
+
+so a lot of people have been researching
+
+you know how can we improve performance
+
+you know especially once we got
+
+multi-core processors which AMD released
+
+in the mid-2000s you know we started
+
+getting this question of how can we
+
+harness these multiple cores for better
+
+performance so it was a lot of research
+
+into this area and we came up with
+
+symmetric multi-threading Intel was the
+
+first to market with this technology and
+
+they branded it as hyper threading so if
+
+you've heard of hyper threading it's
+
+really a SMT so what happens here is
+
+that you know the operating system is
+
+able to take advantage of new
+
+instructions like this is a new assembly
+
+level in
+
+instructions in the x86 processor itself
+
+where the OS can actually give some more
+
+information to the processor on how to
+
+run things in parallel so inside of a
+
+processor a modern processor we execute
+
+an instruction in stages you know we'll
+
+give it some assembly instruction that
+
+says you know load this value or
+
+multiply these things together things
+
+like that it'll break it down into steps
+
+and inside some of those steps in a
+
+processor which is called a pipeline
+
+they actually have multiple copies of
+
+the parts of the process that do the
+
+thing we want to do so like modern
+
+processors you know a single processor
+
+will have a thing called a
+
+floating-point unit and this is for
+
+doing like floating point multiplication
+
+but there's actually more than one
+
+there's usually like between two and six
+
+kind of depends on the processor and so
+
+by using these new instructions
+
+you know the OS is able to tell a
+
+processor that hey there's these two
+
+things of code coming in they're
+
+actually from different threads so you
+
+don't have to worry about doing all the
+
+normal safety checks just run them in
+
+parallel if you can now this isn't two
+
+completely separate CPU cores or
+
+separate processors so you don't get
+
+like a two-time speed-up but you get a
+
+little bit you know it's ranges from
+
+basically no speed-up up to about like
+
+15 to 20 percent it depends on the kind
+
+of code you're writing and so like with
+
+these systems you know we're finally
+
+able to really run a lot of different
+
+code simultaneously now you might notice
+
+I did a little bit of a switch I was
+
+talking about multitasking and I
+
+switched sucking up multi-threading so
+
+two different words and they're actually
+
+do mean different things so when we say
+
+a task a multitasking is an tasks are
+
+basically the same thing as a process we
+
+basically use those terms
+
+interchangeably and the task is kind of
+
+the more generic concept a process is a
+
+more specific concept in the kernel but
+
+they're basically the same thing but
+
+threads are actually very different and
+
+it's really important to understand the
+
+differences between these at least if
+
+you're looking at this kind of like
+
+parallel performance so a process is a
+
+top level execution container we can
+
+think of this as like an application
+
+like an application is a process is
+
+technically possible for an application
+
+have more than one process but usually
+
+it's about one to one and so inside of a
+
+process they have their own memory space
+
+that is dedicated just for them like the
+
+operating system will start up one of
+
+these processes
+
+and I'll give that chunk of memory and
+
+says like this is the memory that you're
+
+allowed to use and you're and these
+
+processes can't actually talk to memory
+
+given to any other process unless
+
+there's a bug in the operating system at
+
+which point we get all kinds of things
+
+and this is actually how viruses worked
+
+by the way as they try to break out of
+
+this little memory container but you
+
+know assuming you're not a virus writer
+
+which hopefully none of us are you know
+
+we're playing safely inside of this
+
+memory space now what this means is if
+
+we do happen to have two or more
+
+processes and we want to have them
+
+communicate to each other that's
+
+actually we have to kind of do some work
+
+to do that so we have to use a thing
+
+that is simply called inter process
+
+communication or IPC now there's a
+
+variety of ways of doing it but it's
+
+typically done using like a socket you
+
+can use a TCP socket there typically a
+
+lot of overhead so we'll use something
+
+else so a thing called a UNIX two main
+
+socket it's basically the same thing
+
+though it works the same way and the key
+
+way that they're similar that's
+
+important to remember is that whenever
+
+we're going to send a message we first
+
+have to take it we have to like bundle
+
+it up you know we have to convert this
+
+into a buffer put it inside of a packet
+
+and transmit it somewhere else who will
+
+then take that packet and do you
+
+assemble it just like whenever we do a
+
+networking requests and this all takes
+
+time it also has limitations on what you
+
+can do with it so this is in the
+
+JavaScript world and you want to
+
+communicate between processes usually we
+
+have to call Jason dot stringify you
+
+know if we want to send an object across
+
+and if you use Jason dot stringify a lot
+
+you may have noticed that well it can be
+
+kind of slow depending on you know what
+
+you're trying to stringify and also
+
+there are certain things that you can't
+
+stringify like if you try that if you
+
+have a function inside of your object
+
+jason touching if i will throw an
+
+exception so this is kind of limited and
+
+the performance of it isn't very good
+
+but processes give us a lot of safety on
+
+the flip side there are threads so a
+
+thread always runs inside of a process
+
+like every thread has a parent process
+
+that it is attached to processes can
+
+have multiple threads a single process
+
+can have multiple threads inside of it
+
+or just one by default years you get one
+
+and so they were going to say that
+
+process but because it's inside of a
+
+process that means that all of these
+
+multiple threads share the same memory
+
+so
+
+let's say you want to share data back
+
+and forth between two different threads
+
+you actually don't have to do anything
+
+because that variable is just sitting in
+
+memory and you both threads just
+
+reference the same variable so you
+
+create a global variable you know from
+
+one thread and you could just directly
+
+read it from the other so it's really
+
+really performant but there is a bit of
+
+a catch here it turns out we actually
+
+still have to do some synchronization
+
+whenever we're trying to you know share
+
+data between threads so as a thought
+
+experiment let's say we have two threads
+
+thread a wants to write to a variable
+
+and you know to a global variable we'll
+
+call it foo and then thread B wants to
+
+read from that variable let's say we
+
+this is a modern system which has
+
+multiple cores in it so both of these
+
+threads are actually running at the
+
+exact same time so the question is what
+
+happens and the answer is we actually
+
+don't know like the first time you run
+
+it it might be that thread a is gonna
+
+write to that variable before thread B
+
+reads it but then you rerun the exact
+
+same code on the exact same machine and
+
+it might happen the other way around
+
+thread B might read that variable before
+
+thread a writes to it and so by doing
+
+that you actually get a different result
+
+every time you run it and it makes your
+
+application unpredictable so this is a
+
+bug in your code specifically this is a
+
+type of bug called a race condition and
+
+so in order to avoid race conditions we
+
+have to actually write some manual code
+
+that sort of synchronizes when these two
+
+threads access it and we have to do a
+
+thing where we say alright thread B I'm
+
+gonna wait until thread a tells me that
+
+it's safe to read this variable so we're
+
+kind of almost back to like the
+
+cooperative multitasking days where I
+
+happen to write this manual code to
+
+coordinate between threads so it's
+
+actually more complicated than even
+
+cooperative multitasking for any modern
+
+app that does multi-threading like this
+
+kind of coordination actually can be
+
+really tricky it is hard to write
+
+correct multi-threaded code that is bug
+
+free like even for a seasoned developer
+
+this can be tricky and so you know if we
+
+look at like modern languages and
+
+runtimes there's been a lot of
+
+experimentation to try to make threads a
+
+lot easier to use Apple has done some
+
+interesting work as a have some others
+
+and nodejs actually has a very specific
+
+answer to this as well and the answer
+
+that note has for how do we deal with
+
+multi-threading ziz we're just not going
+
+to do it we're just not even gonna allow
+
+you to have multiple threads to begin
+
+with
+
+and so this is saying that no js' is
+
+single-threaded you know was we don't
+
+want to open that can of worms however
+
+the reality is actually a little more
+
+tricky than that so we say you know just
+
+a single thread and this is true except
+
+for when it's not actually true which
+
+does happen so what I mean by that is
+
+that all JavaScript's like all of the
+
+dramas could you have every single
+
+javascript file that you wrote that your
+
+mot that are in your modules and
+
+everything and also the javascript that
+
+is in node.js itself and nosiest does
+
+have javascript as part of it in
+
+addition to v8 itself and then also the
+
+event loop like all of this code runs in
+
+one single threat which we typically
+
+call the main thread and so this is what
+
+we mean when we say javascript is single
+
+thread is that all of these things are
+
+running inside of the same thread
+
+however there's a little bit more to no
+
+js' there's actually a fair amount of
+
+C++ code in nodejs to I forget exactly
+
+what the ratio is but I think it's about
+
+2/3 JavaScript to 1/3 C++ last time I
+
+looked you know something like that so
+
+that's a pretty good chunk and C++ is
+
+different because C++ has access to
+
+threads but it depends on how it's being
+
+run so if you have a JavaScript method
+
+that you're calling from node and it's
+
+backed by a c-plus most method if it's a
+
+synchronous JavaScript call then that
+
+C++ code will always run on the main
+
+thread
+
+however if you're calling an
+
+asynchronous method from JavaScript and
+
+this method is backed by some C++
+
+sometimes it runs on the main thread and
+
+sometimes it doesn't it actually depends
+
+on the context in which you are making
+
+this function call so to talk about this
+
+a little more we're gonna give some
+
+examples we're gonna kind of work from
+
+the outside in so first we're going to
+
+look at the crypto module so I chose the
+
+crypto module because the crypto module
+
+has a lot of methods in it some of which
+
+are synchronous some of which are
+
+asynchronous and they are very CPU
+
+intensive they do a lot of math and it
+
+takes a lot of time so we'll start by
+
+looking at the pbkdf2
+
+method so pbkdf2 which I always struggle
+
+to say correctly this is a method for
+
+hashing so we take some random string we
+
+feed it into this and it'll give us a
+
+hash out so this is really important for
+
+a lot of secure
+
+types of coating it this is used in
+
+parts of doing like a TLS communication
+
+yet you know HTTP is like secure
+
+certificate type stuff this is also used
+
+whenever we have say a password from a
+
+user and we want to store that in the
+
+database you know I think everyone knows
+
+it or I hope everyone knows that you
+
+know you never want to store a debt a
+
+password directly in a database that is
+
+a major security hole because you know
+
+if an attacker manages to compromise
+
+that database all of a sudden they have
+
+everyone's passwords so instead of
+
+storing that password directly we hash
+
+it we actually passed it through this
+
+method right here placed this is the
+
+currently recommended method that we use
+
+for hashing passwords now in order to
+
+make the secure part what part of the
+
+things that makes it secure is it's
+
+actually meant to be really hard to
+
+compute it intentionally takes a long
+
+time to create an answer that way you
+
+can't just sit there and make guesses
+
+all day so I use this for an example
+
+this by the way the sample code is more
+
+or less straight from the nodejs Docs
+
+with a few of my own little tweaks to it
+
+and so what we're gonna do is we're
+
+gonna start by calling the synchronous
+
+version of this method I'm going to call
+
+it two times so it's gonna call it once
+
+and then the time after that so when we
+
+run this code we get an execution time
+
+line that looks like this and this is
+
+kind of what we would expect for secret
+
+Ness code you know we call it once it's
+
+gonna start it's gonna run to completion
+
+and then once it's done we're gonna call
+
+the next one and it's gonna run until
+
+completion and we see that this took
+
+about 275 milliseconds cool
+
+so that's what synchronous code looks
+
+like now we're gonna make one single
+
+change so this the exact same code that
+
+we saw earlier except in call instead of
+
+calling the synchronous version pbkdf2
+
+we are calling the asynchronous version
+
+you know everything else is exactly the
+
+same except we swapped those out and so
+
+when we run this code we get an
+
+execution time line that looks like this
+
+we can see that you know we did those
+
+two same calls and they took about the
+
+same time for each one but was actually
+
+able to run them in parallel and so we
+
+can see the whole thing took about 125
+
+milliseconds you know that is quite a
+
+bit faster than the synchronous version
+
+and so what this kind of tells us is
+
+that you know we didn't write any
+
+threading code inside of JavaScript we
+
+just wrote normal regular old JavaScript
+
+and yet it was actually able to run
+
+these to operate
+
+in parallel it and it turns out under
+
+the hood it actually ran these in
+
+separate threads because they're like
+
+there's some c++ methods that node uses
+
+to actually compute this and by the way
+
+so you probably hopefully heard with
+
+node that there's a recommendation you
+
+always use the asynchronous methods
+
+whenever possible this is exactly why
+
+right here it's because by using the
+
+asynchronous methods in a lot of cases
+
+node is able to automatically run things
+
+in parallel for you but if you use the
+
+synchronous methods you never give node
+
+the chance to do that so you always want
+
+to use asynchronous because you can get
+
+some pretty big performance benefits a
+
+lot of the time so alright so this is
+
+two requests we saw for both synchronous
+
+and asynchronous now let's say we
+
+increase this from two requests to four
+
+requests we're this took 125
+
+milliseconds for requests well now this
+
+took 250 milliseconds so this is the
+
+exact same asynchronous code but we just
+
+changed the number of requests you know
+
+that low constant I had at the top and
+
+this took a lot longer now the reason
+
+for this is I ran this code right here I
+
+ran on this exact laptop this laptop is
+
+a dual-core laptop as a dual-core
+
+processor in it so anytime you're doing
+
+something that requires a lot of math
+
+you're doing a lot of stuff in the CPU
+
+you know you're gonna be bound on how
+
+fast the CPU can actually do those
+
+computations and given that there's only
+
+two threads this is our bottleneck so I
+
+did this four times but because only
+
+then only two processors what no one
+
+ended up doing or what the processor
+
+actually ends up doing is it takes those
+
+four threads it's gonna assign two of
+
+those to one core in the other tooth to
+
+the other and inside of that core it's
+
+actually going to be doing just typical
+
+pre-emptive multitasking so it's gonna
+
+like run one thread for a little bit
+
+positive run the other thread for a
+
+little bit posit and just kind of like
+
+ping-pong back and forth until they're
+
+both done so it makes it look like we
+
+ran them in parallel and that's why they
+
+start at the same time and end at the
+
+same time but because it's constantly
+
+having to pause to switch back and forth
+
+it took double the amount of time and by
+
+the way this is true in any language
+
+this is not specific to no js' if you
+
+write you know Java code or C++ or
+
+anything you'll see this exact same
+
+performance profile now let's say we
+
+increase this from four requests to six
+
+requests all right all right okay this
+
+is a little more interesting graph this
+
+is no
+
+her uniform we had this like weird
+
+little tail that's sitting at the end so
+
+if I superimpose these together you know
+
+we hopefully are starting to see a bit
+
+of a trend here and we notice that
+
+there's these four threads that ran
+
+exactly like before you know the the
+
+first four threads in the sixth read
+
+request operated exactly the same as
+
+when we only had four and then those
+
+last two it's almost like we took the
+
+time when we did only two requests and
+
+sort of stuck that to the end and
+
+there's actually reason for this and
+
+that's because you know these a hashing
+
+reoperation xin c++ are done in a
+
+background thread but no doesn't spin up
+
+a new thread for each request instead
+
+nodejs whenever it first starts up or
+
+well technically win it whenever you
+
+first make a request for something
+
+that's going to go on a thread it will
+
+automatically spin up and a preset
+
+number of threads which defaults to four
+
+it will spin up these four threads and
+
+will constantly reuse those threads for
+
+all of its work in this set of threads
+
+is called the thread pool in no js' and
+
+so the reason that we saw forward then
+
+that ran together and then the long tail
+
+was because we had this default for
+
+worker threads in the thread pool
+
+so what nodejs is doing whenever we make
+
+these requests is it can see that first
+
+request come through that's me like okay
+
+I got this I'm gonna assign this to the
+
+first thread and thread pool the second
+
+request will go to the second the third
+
+to the third four to the fourth but when
+
+that fifth request comes through no it's
+
+gonna be it's gonna say alright all of
+
+my worker threads are busy right now so
+
+I'm gonna stick this other request in a
+
+queue until one of the worker threads
+
+becomes available and then the same
+
+thing with the six requests so once that
+
+first request finishes notice you can
+
+say like alright okay so now I have one
+
+of these threads available again I'm
+
+gonna pick off one of these queued
+
+requests and assign it to the next two
+
+so that's why it really does look like
+
+it did for operations and then two
+
+because that's actually what it did
+
+under the hood and so this is a case
+
+where we're actually seeing the
+
+limitation and you know look at this
+
+kind of like limitation in the thread
+
+pool so all right let's move on to our
+
+next example and that is the HTTP module
+
+so we have this a little bit of sample
+
+code here this is using the HTTP module
+
+what this is gonna do is it's going to
+
+download my profile profile photo from
+
+my personal website I chose this
+
+specific one because it's a rather large
+
+files about eight hundred kilobytes
+
+my website is hosted in Azure which
+
+works well for this test because a
+
+throughput inside of a jar is really
+
+consistent also consists in Amazon and
+
+nativist anything would happen there the
+
+other reason I wanted to do this is
+
+because I controlled this system which
+
+meant I was able to disable the CDN like
+
+there was no CDN sitting in front of
+
+this CD ends are great for performance
+
+because you know it can do lots of like
+
+caching and things like that you can be
+
+downloading files closer to where you
+
+are geographically and you also decrease
+
+your bandwidth cause they're not great
+
+for this test because CD ends make the
+
+timing unpredictable which is not good
+
+for benchmarks so we wanted to download
+
+something that was very very predictable
+
+so I chose this file so what we're doing
+
+here is we're downloading it we're
+
+listening to the data event to make sure
+
+that we're actually going to download
+
+all of the data note is kind of smart
+
+whenever we do this if we're not
+
+listening to the data event at all it's
+
+actually just going to kind of skip
+
+downloading part of it and then we wait
+
+for the end event and then we're going
+
+to tie it and so this and we're timing
+
+from when we call HTTP dot request to
+
+the time the end event is fired so once
+
+again we are starting with two requests
+
+and we look at the execution time when
+
+it--and it looks like this and we say
+
+all right great it actually took almost
+
+the exact amount same amount of time to
+
+download that file twice which we want
+
+to see so it took about seven hundred
+
+milliseconds alright so now we're gonna
+
+do the same thing we did before and
+
+increase the number of requests to four
+
+and so we see they also took all about
+
+the exact same amount of time we also
+
+took about seven hundred milliseconds it
+
+did not increase the amount of time it
+
+takes to download this file which is
+
+different than the results we saw in
+
+crypto the reasons for this it has
+
+nothing to do with note this and this is
+
+all just about like kind of a computer
+
+architecture and bottlenecks whenever
+
+we're downloading a file and especially
+
+in this case well we're downloading a
+
+file and only saving it to memory we're
+
+not writing it to the hard drive
+
+the limitation is the network itself
+
+like whenever we're downloading a file
+
+like this our computers are basically
+
+sitting there doing nothing most of the
+
+time and everyone smile you get a little
+
+bit of data from the network which is
+
+lovely and go process so since we you
+
+know we're not limited by the number of
+
+CPU cores because our CPUs sitting there
+
+doing nothing then you know we don't hit
+
+that bottle neck so we do this for it's
+
+the exact same amount of time as to you
+
+know it's just the workload is different
+
+then
+
+all right so we'll increase this to six
+
+like we did before and well so this is a
+
+little is a little more unexpected
+
+though you're compared to the previous
+
+slide you notice it still took about 700
+
+milliseconds and there's no tail so this
+
+is different than crypto you know if
+
+this it turns out that this is actually
+
+not subject to the limitations of the
+
+thread pool the reasons for that is
+
+inside of node whenever possible it will
+
+actually use C++ asynchronous primitives
+
+under the hood so it turns out it is
+
+actually possible to do asynchronous
+
+coding inside of C++ in certain cases
+
+this is a thing that is provided by the
+
+operating system itself so the way this
+
+works it looks a little different than
+
+JavaScript but it's roughly the same
+
+thing the idea is that we tell via OS
+
+when we tell the kernel like you know I
+
+want to go ahead and download this
+
+resource and then the kernel is actually
+
+going to manage downloading that code
+
+it's happening in the kernel not inside
+
+of your application and then what we can
+
+do is we can actually ping the kernel
+
+and ask hey you don't with this request
+
+yet you know are you done with this and
+
+so inside know we just can't continue
+
+Lee asking are you done yet are you done
+
+yet are you done yet and eventually it's
+
+gonna say yes once it's done we can then
+
+go and call some other methods that says
+
+all right give me the results for this
+
+thing that I requested now since this is
+
+a part of the kernel we have to use a
+
+different mechanism for each different
+
+OS because they have different ways of
+
+doing this so on linux this method is
+
+called a poll on Mac OS is it called KQ
+
+and our windows this is called get
+
+queued completion status X and so
+
+whenever we are making these
+
+asynchronous C++ calls because the
+
+operating system is doing it all for us
+
+we don't have to really do any code in
+
+C++ we don't have to assign it to a
+
+background thread and so whenever we're
+
+using this it's actually happening in
+
+the main thread itself and thus we're
+
+not limited limited to the number of
+
+threads in the thread pool cool
+
+so that's how that whole thing is
+
+working how does that relate back to the
+
+event loop well it turns out that the
+
+event loop sort of acts like a central
+
+dispatch for all of these requests this
+
+is of course no oversimplification the
+
+event loop actually does a lot of
+
+different things but specifically for
+
+the purpose of performance and
+
+especially threading performance
+
+we can think of the event loop is
+
+basically a director you know whenever
+
+we make one of these requests in
+
+JavaScript you know it's gonna go
+
+through it's gonna do some a lot of work
+
+in JavaScript itself but eventually gets
+
+to the point where it's gonna cross from
+
+JavaScript and to C++ and once it
+
+crosses over to that side that's when
+
+the request goes to the event loop and
+
+the event loop is going to look at this
+
+request and I'm once again over
+
+simplifying here there's a lot more
+
+stuff that does under the hood in detail
+
+but basically what it does is it'll look
+
+at this request and say is this a
+
+synchronous method okay cool within the
+
+thread that I'm running in I'm gonna
+
+ship off to some other you know C++ code
+
+that's going to just go and do that
+
+request right then and there if it's an
+
+asynchronous request the milliner's
+
+going to look at this and say alright is
+
+this something that I can run using a
+
+C++ async primitive if so it'll ship it
+
+off to the bit of C++ code directly that
+
+handles that you know inside of the main
+
+threat if it can't be run using a C++
+
+async from it then it's gonna say
+
+alright this kit has to go into a
+
+background thread and so it starts to go
+
+into this whole like threading logic so
+
+it's gonna you know queue this up for to
+
+be sent over to one of these threads and
+
+so the event loop is the one that
+
+manages it and then whenever each of
+
+these calls finishes you know it's gonna
+
+signal back to the event loop either
+
+coming from one of the threads or
+
+directly from the C++ code if it's in
+
+you know C++ async primitive and then
+
+the event loops can't say like alright
+
+this is done and it's gonna go notify
+
+back you know across v8 back into
+
+JavaScript land be like alright this
+
+operation is done in here's the result
+
+in an aside of JavaScript note is going
+
+to go and then call all of those
+
+callbacks that are registered and
+
+waiting for that you know before that
+
+result and so and that's how we get it
+
+back you know it's kind of like
+
+constantly going and basically we can
+
+think of it like a circle I like I said
+
+there's a lot of other things the event
+
+loop does as well it manages like timers
+
+it manages whenever it's time to
+
+shutdown and a bunch of other things
+
+like that too so a real question of
+
+course is which API is use which
+
+asynchronous mechanism yeah this is what
+
+we want to know to understand the
+
+performance and by the way I kind of
+
+shamelessly borrow this slide from Bert
+
+belter he created for his own talk he
+
+gave on the event loop where it actually
+
+works on the event loop so he knows this
+
+stuff a lot better than I do the key
+
+thing is like all the kernel async this
+
+is pretty much all of our networking
+
+like networking most of the time is done
+
+using kernel async mechanism so we're
+
+not subject to the limit
+
+the thread pool same thing with pipes
+
+most of the time and the same thing with
+
+all of the DNS resolve calls but there
+
+are also some things we have to run in
+
+thread pool so everything from the file
+
+system module is run in the thread pool
+
+this is the big thing that I kind of
+
+keep in mind turns out there's just not
+
+any C++ asynchronous primitives for file
+
+i/o and so whenever you're doing a lot
+
+of file system calls you know a whole
+
+bunch of file i/o you know you may run
+
+into the limitations of the thread pool
+
+now more than likely you're actually
+
+going to be limited by just how fast
+
+your hard drive is and you won't run
+
+into this but it is hypothetically
+
+possible that you might be able to run
+
+into these thread pool limitations turns
+
+out that DNS lookup itself has to be run
+
+in thread pool as well and there's also
+
+a couple of edge cases too for pipes you
+
+know and think like file system stuff
+
+now it does all some of the stuff is
+
+also dependent on which OS you're
+
+running in because like I said each OS
+
+provides different asynchronous
+
+primitives so on the UNIX side all of
+
+the UNIX domain sockets which I
+
+mentioned earlier for IPC calls and
+
+things like that
+
+all tty input so tty input if you're not
+
+familiar with that term is basically the
+
+console so standard out standard air and
+
+things like that and standard n so those
+
+are TTY so all of your console.log
+
+constant info is going through this TC
+
+white module under the hood same thing
+
+with UNIX signals so this is SIGINT sig
+
+term things like that if you're familiar
+
+with those
+
+they finally child process so the thing
+
+you know your exec spawn things like
+
+that those are all handled using kernel
+
+ASIC mechanisms on UNIX but the reverse
+
+is true on Windows in windows child
+
+process tt and TTY are all handled using
+
+threads just because gake you know the
+
+Windows mechanism doesn't provide those
+
+primitives there's also a couple of edge
+
+cases for TCP servers on Windows that
+
+have to be running background threads
+
+instead of using kernel async mechanisms
+
+and so like if you're you know running
+
+your app and you're getting some really
+
+weird performance numbers like
+
+especially if you're looking at
+
+something like wait why did this happen
+
+here I thought it should have happened
+
+here you know one of the first things I
+
+would recommend looking at is you know
+
+what are the things you're calling could
+
+this possibly be a limitation especially
+
+if you're seeing that weird long tail
+
+that I showed in the graph earlier now
+
+there's a whole bunch of other things
+
+that can cause performance issues so I
+
+don't want to say like this will be your
+
+issue before Matt's on node is
+
+complicated of course but this cancer
+
+be a part of it so if you want to learn
+
+more about this there are two great
+
+talks the sort of classic talks about
+
+the event loose one by a Sam Roberts
+
+who's sitting right there and also one
+
+by Burt Beltre and both of these kind of
+
+start by describing the the event loop
+
+from the inside out it talks about like
+
+how it's constructed and how it operates
+
+and they're a great way to kind of learn
+
+more about this by the way I'll put
+
+these slides up on Twitter so you don't
+
+have to worry about memorizing or taking
+
+them down right now it was also a great
+
+blog post by Daniel Kahneman that kind
+
+of summarizes these as well alright and
+
+with that if anyone has any questions
+
+I'm gonna be at the Microsoft booth you
+
+can find me there and ask me all kinds
+
+of questions about node or typescript or
+
+all sorts of other stuff like that and
+
+with that I want to thank you all for
+
+coming
+
+[Applause]
+
